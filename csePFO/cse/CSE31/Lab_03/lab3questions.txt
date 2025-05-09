@@ -1,0 +1,70 @@
+Lab_03 Questions
+David Wang
+CSE31
+
+1.) Memory Exercise
+
+int num;
+
+c1: stack
+c2: Memory is allocated
+c3: the memory is located in the stack
+c4: this statement does not result in a memory leak
+
+int *ptr;
+
+c1: stack
+c2: Memory is allocated
+c3: the memory is located in the stack
+c4: this statement does not result in a memory leak.
+
+int **handle;
+
+c1: stack
+c2: memory is allocated
+c3: the memory is located in the stack
+c4: this statement does not result in a memory leak.
+
+num = 14;
+
+c1: stack
+c2: no memory is allocated, assigning value to the already allocated memory of int num
+c3: 
+c4: Statement does not result in a memory leak.
+
+ptr = (int *)malloc(2 * sizeof(int));
+
+c1: heap
+c2: memory is allocated in the heap
+c3: memory allocated in the heap, then ptr is pointed to it
+c4: Memory needs to be freed manually for heap, so it is a memory leak until it is freed
+
+handle = &ptr;
+
+c1: stack
+c2: no memory is allocated.
+c3: 
+c4: does not result in a memory leak
+
+*ptr = num;
+
+c1: stack
+c2: no memory is allocated
+c3:
+c4: Does not result in a memory leak, just pointing towards num's memory location
+
+ptr = &num;
+
+c1: stack
+c2: no memory is allocated
+c3:
+c4: Results in a memory leak, since the memory that was allocated for ptr with the malloc statement has not been freed,
+and has been left behind with ptr now pointing at num directly.
+
+handle = (int **)malloc(1 * sizeof(int **))
+
+c1: heap
+c2: memory is allocated
+c3: allocated in the heap
+c4: Results in a memory leak if the memory allocated for handle is not freed later.
+

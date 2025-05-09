@@ -1,0 +1,45 @@
+Lab 7 Logic Check
+
+7.10.4
+
+1.) False
+2.) True
+3.) True
+4.) False
+5.) False
+6.) True
+7.) False
+
+7.11.3
+
+1.) ArrayList<Integer> frameScores = new ArrayList<Integer>();
+2.) currFrame = frameScores.get(8);
+3.) frameScores.set(2, new Integer(10));
+4.) frameScores.add(new Integer(9));
+
+7.12.2
+
+1.) ArrayList<Seat> mySeat = new ArrayList<Seat>();
+2.) trainSeat.add(new Seat());
+3.) trainSeat.get(0).reserve("John", "Smith", 44);
+
+
+
+Q1) Instead of creating a new object shop of type shop, we need
+    to create an object of type ShopArr. Change Shop shop = new Shop(); to ShopArr shop = new ShopArr();
+Q2) We can use cheese.length instead of max, since the array is set to a length of max. 
+Q3) We can tell which instantiation corresponds to which constructor definition by looking at the arguments passed through the
+    instantiation and matching them to the parameters of the constructor definitions.
+Q4) A mutator method call consists of a "." operator and then an argument passed through the method call for the mutator
+    method to use.
+Q5) If we added the line cheese[2].setName("Wrong Name"); The instance variable name for the object at cheese[2] would be
+    set to "Wrong Name".
+Q6) The init() method is void because it doesn't return any values and instead modifies the instance variables of the objects
+    inside the array. Thus, it is a mutator. Private makes it so that the method can only be accessed in the same class limiting
+    the range of potential errors.
+Q7) Constructor methods have the same name as the name of the class they're in. Constructor methods do not have return types, but
+    methods do.
+Q8) The number of different objects in the cheese array. So, cheese.length.
+Q9) A cheese pointer would not be necessary because the for loops already deal with incrementing through the array and getting 
+    the instance variable values of each object in the array.
+Q10) The amount input for max will be printed out because max = cheese.length = number of objects in the array.

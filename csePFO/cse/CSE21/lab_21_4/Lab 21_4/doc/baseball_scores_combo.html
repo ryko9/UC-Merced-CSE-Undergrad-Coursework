@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            CSE 21 lab 4
+        </title>
+        <meta name="generator" content="BBEdit 10.5" />
+    </head>
+    <body>
+        <h1> Baseball score processing, part 3 (Testing & Overloading) </h1>
+        <h3> Problem </h3>
+        <p>
+        	We have two different ways to summarize the outcome of a baseball game. First is just 
+        	a statement of who won and in how many innings. Second way is more detailed with the scores for 
+        	each half innings. We will now add the capability for the users to choose which type of output they want to see.
+        	Both of these behavior belongs to <tt>result</tt> so how can we make multiple version of it? Overloading is 
+        	an easy to enable putting different behaviors inside the same method name but with different signatures. 
+        	
+        	We will tweak our method design so we are no longer reliant on class variables to hold all the information. We will move the 
+        	declaration inside each of the methods and pass the information around instead. This makes the solution a little more complicated
+        	but it allows for testing each individual methods. Unit tests for this lab are made for you already in ScorerComboTest.java.
+        </p>
+
+        <ol>
+        <h2>Task 1: <tt>initialize</tt></h2>
+		<p> Fill-in the body of <tt>initialize</tt> method and answer the Assessment questions below. Note that its job is reduced 
+		now to just filling in the SENTINEL value for the two arrays that are passed in. It no longer knows anything about inning or batter 
+		variables like in previous versions.</p>
+
+            <li>
+                visitorScores = new int [MAX_BOX_SCORE_LENGTH]; has been moved to <tt>main</tt>, why?
+            </li>
+            
+            <li>
+   				What would happen if visitorScores = new int [MAX_BOX_SCORE_LENGTH]; is inside <tt>initialize</tt>?         
+            </li>
+            <li>
+   				Which scope or method does visitorScores array belong to now?
+   			</li>
+             <li>
+   				What if the declaration of initialize changes to public static void initialize (int[] homeScores, int [] visitorScores )? Would it still work? (Explain how)
+            </li>
+            <li>
+   				What about public static void initialize (int[] arr1, int [] arr2 ), would it still work? (Explain how)
+            </li>
+            <li>
+   				What about public static void initialize (double[] arr3, double [] arr0 ), would it still work? (Explain how)
+            </li>
+
+        <h2>Task 2: <tt>readScores</tt></h2>
+	
+            <p>
+                <tt>readScore</tt> now accepts three parameters (Scanner scores, int[] visitorScores, int[] homeScores). battle and inning are now local variable
+                to <tt>readScore</tt>. They have been declared and initialized for you. Complete the code so it uses HOME and VISITORS constants correctly.
+            </p>
+            
+            <li>
+   				Show the lines you modified in this lab compared to Lab 3 inside <tt>readScores</tt>.
+            </li>
+
+		<h2>Task 3: <tt>gameScore</tt></h2>            
+            <p>
+            	We have provided <tt>gameScore</tt> method in ScorerCombo.java. In this step, you should start to look at ScorerComboTest.java 
+            	and answer the Assessment questions below. 
+            </p>
+            
+            <li>
+   				How many tests are given in ScorerComboTest.java (for gameScore)?
+            </li>
+            <li>
+   				Can you identify different type of testing that is missing for this method?
+            </li>
+            <p>
+   				<b>Add</b> at least 3 tests into ScorerCombo.java for gameScore inside testGameScore.
+            </p>
+            
+            <li>
+   				List the 3 tests and why you added them here
+            </li>
+
+		<h2>Task 4: <tt>printBoxScore</tt></h2>
+            <p>
+                There are 3 different versions of <tt>printBoxScore</tt> given. Each of them have a different signature with the 
+                parameter types. 
+            </p>
+            <li>
+   				What is version 1 doing?
+            </li>
+            <li>
+            	What is version 2 doing?
+            </li>
+            <li>
+            	What is version 3 doing?
+            </li>
+            <li>
+            	Which version is return printBoxScore(teamBoxScore); calling in version 3?
+            </li>
+            <li>
+            	Where does the version 3 get the return value?
+            </li>
+		<h2>Task 5: <tt>result</tt></h2>
+            <p> There are also 2 different versions of <tt>printBoxScore</tt>. It is your job to fill-in version 1. It is a simple version 
+            of result where just based on the inning and the two scores, the proper output is returned. Version 2 is already implemented provided
+            you did version 1 correctly. 
+            </p>
+            <li>
+   				Version 2 has return result(inning, visitorScore, homeScore);, what is it doing?
+            </li>
+            <li>
+   				Why do you not need batter inside result Version 1?
+            </li>
+            <p>
+   				<b>Add</b> at least 3 tests into ScorerCombo.java for <tt>result</tt> inside testResult.
+            </p>        
+            <li>
+   				List the 3 tests and why you added them here
+            </li>
+            
+        <h2>Task 6: <tt>gameIsOver</tt></h2>
+            <p> We have provided <tt>gameIsOver</tt> method which works with the arrays. 
+            There is also testGameIsOver in ScorerComboTest.java. You need to add 3 additional tests to expand on what is being tested</p>
+            <li>
+   				How do you know what is being tested already in testGameIsOver?
+            </li>
+            <li>
+   				List the 3 tests and why you added them here
+            </li>
+            
+        <h2>Task 7: <tt>main</tt></h2>
+            <p> Added the proper code inside <tt>main</tt> which will output just like lab 2 without the boxscore printed. </p>
+            <li>
+   				String answer = input.next(); is getting what type of answer from the user?
+            </li>
+            <li>
+   				We need to check whether the answer is yes or no so we provided this code : 
+   				if (answer.charAt(0) == 'y' || answer.charAt(0) == 'Y')
+   				Why should we check against two different y's? 
+            </li>
+ 
+        </ol>
+
+    </body>
+</html>

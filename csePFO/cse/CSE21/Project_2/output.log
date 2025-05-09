@@ -1,0 +1,26 @@
+
+Enter 'data/Students.txt' or 'data/FullRoster.txt'.
+Enter file name: data/Students.txt
+
+Abey matches with Melissa with the score 60
+John matches with Jeff with the score 100
+Craig has no matches
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Enter 'data/Students.txt' or 'data/FullRoster.txt'.
+Enter file name: data/FullRoster.txt
+
+Abhay matches with Alexandra with the score 96
+Adam matches with Alan with the score 100
+Alexander matches with Alfred with the score 98
+Analisa matches with Andrea with the score 99
+Andrew matches with Colin with the score 90
+Angelina matches with Dana Colleen with the score 93
+Antonietta Vicky matches with Cynthia with the score 92
+Arun Premnath matches with Kurt with the score 81
+Chih matches with Dalila with the score 78
+Daniel has no matches
+Kristal matches with Kristin Lunney with the score 91
+Kristina matches with Lifen with the score 90
+Lauren matches with Lien T. with the score 96

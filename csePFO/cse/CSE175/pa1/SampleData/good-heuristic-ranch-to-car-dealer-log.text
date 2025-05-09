@@ -1,0 +1,64 @@
+HEURISTIC SEARCH ALGORITHM COMPARISON
+Enter the name of the location file:
+small-locations.dat
+Enter the name of the road file:
+small-roads.dat
+Enter the name of the initial location:
+ranch
+Enter the name of the destination location:
+car-dealer
+TESTING UNIFORM-COST SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT ranch.
+TAKE old-highway FROM ranch TO diner.
+TAKE access-road FROM diner TO bookstore.
+TAKE highway-south FROM bookstore TO truck-stop.
+TAKE back-road FROM truck-stop TO car-dealer.
+Path Cost = 50.200000.
+Number of Node Expansions = 191.
+TESTING UNIFORM-COST SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT ranch.
+TAKE old-highway FROM ranch TO diner.
+TAKE access-road FROM diner TO bookstore.
+TAKE highway-south FROM bookstore TO truck-stop.
+TAKE back-road FROM truck-stop TO car-dealer.
+Path Cost = 50.200000.
+Number of Node Expansions = 15.
+TESTING GREEDY SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT ranch.
+TAKE old-highway FROM ranch TO diner.
+TAKE access-road FROM diner TO bookstore.
+TAKE highway-east FROM bookstore TO fast-food.
+TAKE overgrown-path FROM fast-food TO car-dealer.
+Path Cost = 65.600000.
+Number of Node Expansions = 4.
+TESTING GREEDY SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT ranch.
+TAKE old-highway FROM ranch TO diner.
+TAKE access-road FROM diner TO bookstore.
+TAKE highway-east FROM bookstore TO fast-food.
+TAKE overgrown-path FROM fast-food TO car-dealer.
+Path Cost = 65.600000.
+Number of Node Expansions = 4.
+TESTING A* SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT ranch.
+TAKE old-highway FROM ranch TO diner.
+TAKE access-road FROM diner TO bookstore.
+TAKE highway-south FROM bookstore TO truck-stop.
+TAKE back-road FROM truck-stop TO car-dealer.
+Path Cost = 50.200000.
+Number of Node Expansions = 61.
+TESTING A* SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT ranch.
+TAKE old-highway FROM ranch TO diner.
+TAKE access-road FROM diner TO bookstore.
+TAKE highway-south FROM bookstore TO truck-stop.
+TAKE back-road FROM truck-stop TO car-dealer.
+Path Cost = 50.200000.
+Number of Node Expansions = 14.
+ALGORITHM COMPARISON COMPLETE

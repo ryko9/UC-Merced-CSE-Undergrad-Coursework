@@ -1,0 +1,54 @@
+sortArray1 pseudo
+
+
+void sortArr(int isAscending, int arr[], int size)
+{
+	if(isAscending == 0)
+	{
+		selectionSort in ascending
+	}
+	if(isAscending == 1)
+	{
+		selectionSort in descending
+	}
+}
+
+
+algorithm for ascending:
+
+for(int i = size - 1; i > 0; i--)
+{
+
+	int max = arr[0]
+	int index = 0;
+
+	for(int j = 1; j < i + 1; j++)
+	{
+		if(arr[j] > arr[index])
+		{
+			min arr[j];
+			index = j;
+		}
+	}
+
+	if (index != i)
+	{
+		arr[index] = arr[i];
+		arr[i] = min;
+	}
+}
+
+algorithm for descending, 
+
+	rename max to min,
+	min is still = arr[0] and index is same
+
+	change if (arr[j] > arr[index])
+
+	to (arr[j] < arr[index])
+
+only thing changed is that now the minimum number is being found
+and placed at the end each time the outer for loop increments
+
+thus, we will have all the min placed at end until entire array is
+descending from start to beginning.

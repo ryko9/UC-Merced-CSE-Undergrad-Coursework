@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+# This script is for the testing the correctness of your code. You should 
+# compile your code using GNU C++ compiler using 2011 C++ standard. To do so,
+# in your terminal type:
+#
+# $ g++ -std=c++11 -o a.exe source_file.cpp
+# 
+# This will create an output 'a.exe' file in the same directory. In order to
+# run the grader, type following in terminal:
+#
+# $ ./Grader
+# 
+# If your implementation is correct, you should see the following:
+#
+#  Correct for 1 th example.
+#  Correct for 2 th example.
+#  Correct for 3 th example.
+#  Correct for 4 th example.
+#  Correct for 5 th example.
+#  Correct: 5/5
+#
+# If you want to test your code for just one test file, you can try:
+#
+# $ ./a.exe < ../testfiles/t1
+#
+# You can program your code in your favorite IDE, but make sure that you 
+# compile it using GNU C++ compiler with C++ 2011 standard and test it in 
+# the lab computers before submission. 
+# 
+# TROUBLESHOOTING:
+# If you see following error message:
+# bash: ./Grader: Permission denied
+# Then you need to change file permissons to be executable:
+#
+# $ chmod +x ./Grader
+#
+# Copyright (c) 2018 by Arman Zharmagambetov, Yerlan Idelbayev, and 
+# Miguel A. Carreira-Perpinan
+
+var=()
+for v in `find testfiles/ -name o\*`
+do
+  v=${v#"testfiles/o"}
+  var+=($v)
+done
+# we need to sort them since files in a folder might be in arbitrary order
+var=($(for each in ${var[@]}; do echo $each; done | sort -n))
+len=${#var[@]}
+
+corr=0;
+for i in ${var[@]}; do
+    
+  ./a.exe < ./testfiles/t$i | diff ./testfiles/o$i - > /dev/null
+  res=$? # get exit code of the diff
+  if [ "$res" -eq 0 ] ; then # if exit code is 0 then correct
+    echo "Correct for $i th example.";
+    ((corr=corr+1))
+  else
+    echo "Incorrect for $i th example.";
+  fi;
+
+done
+
+echo "Correct: "$corr"/"$len;
+

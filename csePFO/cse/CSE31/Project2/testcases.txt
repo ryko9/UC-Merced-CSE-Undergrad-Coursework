@@ -1,0 +1,113 @@
+David Wang
+CSE31
+Project 2 Test Cases
+
+
+Test Case #1:
+
+Enter size of list (between 1 and 25): 5
+Enter one list element: 
+0
+Enter one list element: 
+20
+Enter one list element: 
+3
+Enter one list element: 
+4
+Enter one list element: 
+-5
+Content of list: 0 20 3 4 -5 
+Content of list: -5 0 3 4 20 
+Enter a key to search for: 21
+Key not found!
+-- program is finished running --
+
+Test Case #2
+
+Enter size of list (between 1 and 25): 4
+Enter one list element: 
+-20
+Enter one list element: 
+21
+Enter one list element: 
+0
+Enter one list element: 
+10
+Content of list: -20 21 0 10 
+Content of list: -20 0 10 21 
+Enter a key to search for: 10
+Key found!
+-- program is finished running --
+
+Test Case #3: 
+
+Enter size of list (between 1 and 25): 6
+Enter one list element: 
+-3
+Enter one list element: 
+-3
+Enter one list element: 
+2
+Enter one list element: 
+1
+Enter one list element: 
+0
+Enter one list element: 
+34
+Content of list: -3 -3 2 1 0 34 
+Content of list: -3 -3 0 1 2 34 
+Enter a key to search for: 35
+Key not found!
+-- program is finished running --
+
+Test Case #4:
+
+Enter size of list (between 1 and 25): 7
+Enter one list element: 
+8
+Enter one list element: 
+7
+Enter one list element: 
+6
+Enter one list element: 
+2
+Enter one list element: 
+2
+Enter one list element: 
+1
+Enter one list element: 
+0
+Content of list: 8 7 6 2 2 1 0 
+Content of list: 0 1 2 2 6 7 8 
+Enter a key to search for: 2
+Key found!
+-- program is finished running --
+
+Test Case #5:
+
+Enter size of list (between 1 and 25): 10
+Enter one list element: 
+7
+Enter one list element: 
+3
+Enter one list element: 
+3
+Enter one list element: 
+5
+Enter one list element: 
+5
+Enter one list element: 
+8
+Enter one list element: 
+-1
+Enter one list element: 
+2
+Enter one list element: 
+90
+Enter one list element: 
+2
+Content of list: 7 3 3 5 5 8 -1 2 90 2 
+Content of list: -1 2 2 3 3 5 5 7 8 90 
+Enter a key to search for: 100
+Key not found!
+-- program is finished running --

@@ -1,0 +1,31 @@
+Setup Shop(I)
+
+I: 1-3) Tested values of 0, 1, 2 when asked how many items to sell. Made sure that the program made the same amount of products to be named. When using 0, the program doesn't
+create any items so nothing shows up when listing items. When checking out with 0 items, the subtotal and discount all appropriately show 0. When using 1 and 2, the program
+appropriately adds a subtotal based on the quantity of items purchased per product. The discount doesn't apply unless the subtotal is greater than or equal to the discount
+amount listed and is subtracted from the subtotal when it does. 
+
+I: 4) Did setup shop twice, first with one product, Banana, that costed 3. Did setup again with one product, Apple, that cost 3. Running through the other
+functions shows that the program only used the most recent setup, Apple instead of Banana.
+
+Buy(II)
+
+II: 1) Tested by trying to choose function 2 before setting up shop. Since the shop was not setup, the user could not buy and was instead redirected to the functions menu.
+II: 2) Tested with two products. For each product respectively, the program appropriately asks the user how much of that product they want to purchase. 
+II: 3) Tested with two products, Apple and Banana. Used the buy function 3 times, buying a different quantity of bananas each time. When going to List and Checkout, the program
+used the most recent quantity bought.
+
+List(III)
+
+III: 1) Tested by trying to use the list function without setting up. Tells the user that the shop has not been setup, and redirects them to functions menu.
+III: 2) Setup shop, and tried to list function without buying any items. Tells the user that no items have been bought, and redirects them to the functions menu.
+III: 3) Tested with two products in setup, and bought zero of the first product but two of the second product. When running list, it only shows the products that were bought in non-zero quantities
+as expected. Lists the quantity of non-zero products bought and price per item. Redirects user to functions menu after.
+
+List(IV)
+
+IV: 1) Tested by trying to use the checkout function before having done setup. Tells the user that the shop has not been setup, and redirects them to functions menu. After setting up and buying, checks out properly.
+IV: 2) Tested with shop setup, then tried to use checkout before having bought anything. Tells the user that the shop has not been setup, and redirects them to functions menu. After buying up, checks outs properly.
+IV: 3) Tested with a discount rate of 100% and discount amount of 0. Wanted to see that if the discount rate was 100% the total would be zero because a 100% discount would mean the total would be $0.00. Since the amount required to
+qualify for discount was 0, the user would always get a 100% discount as long as their subtotal was 0 or greater.
+IV: 4) Tested with a discount rate of 25% and a discount amount of 1000. Program ended after checkout as expected.

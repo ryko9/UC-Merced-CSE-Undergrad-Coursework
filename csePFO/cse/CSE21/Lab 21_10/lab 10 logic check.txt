@@ -1,0 +1,84 @@
+Lab 10 Logic Check
+
+10.5.1
+
+1.) True
+2.) True
+
+10.6.1
+
+1.) Yes
+2.) No
+3.) Yes
+
+10.7.1
+
+1.) Is-a
+2.) Has-a
+3.) Has-an
+4.) Is-a
+
+Task 1:
+
+1. ArrayList<Pomeranian>
+2. ArrayList<Pet>
+3. ArrayList<Pet>
+4. ArrayList<GreatDane>
+5. ArrayList<Pet>
+6. ArrayList<Pet>
+
+Task 2:
+
+words.add ("a"); [a]
+words.add ("b"); [a, b]
+words.add ("c"); [a, b, c]
+words.remove("b"); [a, c]
+words.add ("d"); [a, c, d]
+words.remove ("a"); [c, d]
+words.add ("e"); [c, d, e]
+words.remove ("b"); [c, d, e] 
+words.add ("d"); [c, d, e, d]
+words.remove ("c"); [d, e, d]
+words.remove("d"); [e, d]
+
+Task 5: 
+
+I predict that the conservative player will play a better game of pig because he
+will roll 1 less and be able to keep his points.
+
+Results:
+In all the runs of the simulator class Player 0, the conservative player, won more games
+than Player 1, the risky player.
+
+Task 6:
+
+Created two new strategies, one where the player only rolls up to eight times before beginning to hold,
+and one where the player only rolls up to ten times before beginning to hold.
+
+Task 7:
+
+The player 2 used my strategy of rolling only up to eight times, and player 3 used my strategy
+of rolling up to ten times. 
+
+Results:
+
+Trial 1 - Player 0 won 7, Player 1 won 2, Player 2 won 5, Player 3 won 4
+Trial 2 - Player 0 won 9, Player 1 won 0, Player 2 won 3, Player 3 won 6
+Trial 3 - Player 0 won 6, Player 1 won 3, Player 2 won 6, Player 3 won 3
+Trial 4 - Player 0 won 5, Player 1 won 4, Player 2 won 7, Player 3 won 2
+
+Based on the results, Player 2 did consistently better than player 1. Rolling
+up to eight times tended to yield better results than continuously rolling.
+
+Player 3 also did consistently better than player 1, showing that rolling ten times
+was still better than continuously rolling. 
+
+Player 2 tended to get higher winrates than Player 3. Rolling eight times
+tended to be better than rolling ten times, which shows that as the amount of rolls
+increases, the win rate decreases.
+
+Player 0's winrate was consistently higher than Player 3's but even half of the time
+with player 2's.
+
+
+Thus, I can conclude that rolling more leads to lower win rates as expected. 

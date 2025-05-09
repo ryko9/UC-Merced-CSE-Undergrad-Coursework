@@ -1,0 +1,12 @@
+
+Abhay	82	SJ
+Adam	71	SC
+Alan	69	SC
+Alexander	66	LA
+Alexander	64	NF
+Alfred	64	PD
+Aña	63	Madera
+Analisa	63	SF
+Andrea	62	LA
+Andrew	62	SF
+Angelina	61	LA

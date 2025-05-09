@@ -1,0 +1,56 @@
+David Wang
+HW 7
+
+1.)
+
+Loop:   addi $v0, $v0, 1
+		addi $t1, $a0, 4
+		lw	$t0, 0($t1)
+		add $a0, $a0, 4
+		bne $t0, $0, Loop
+		nop
+		jr $ra
+
+Rewritten,
+
+Loop:	addi $t1, $a0, 1
+		lw $t0, 0($t1)
+		addi $v0, $v0, 1
+		add $a0, $t0, $a1
+		bne $t0, $0, Loop
+		addi $a0, $a0, 1
+		jr $ra
+
+2) 
+	 addi $t1, $a0, 4 and addi $v0, $v0, 1
+     lw $t0, 0($t1)
+     stall
+     add $a0, $t0, $a1 and bne $t0, $0, Loop
+     addi $a0, $a0, 4
+     jr $ra
+
+3.)
+
+for jr$ ra,
+
+since the PC is set to $ra, there need to be 6 PCs to implement the hardware of static dual issue.
+
+4.)
+
+Yes, changes are required. The two addi instructions back to back won't execute properly in the execute stage. Furthermore, there is also a load instruction in the sequence. Thus we need additional ports to access the register file.
+
+5.)
+
+Yes, since branches aren't finished until the decode stage, the bne instruction wont receive the correct forwarded value. Thus, we need to stall 2 cycles or add 2 no ops between the instructions addi $t1, $a0, 4 and bne $t0, $0, Loop
+
+6.)
+
+Yes, we need to modify the architecture to access memory because of the LW instruction.
+
+7.)
+
+No, because the SW instruction isn't storing data into memory. No modifications needed.
+
+8.)
+
+There is a read and write hazard which can be solved with the use of no-ops.

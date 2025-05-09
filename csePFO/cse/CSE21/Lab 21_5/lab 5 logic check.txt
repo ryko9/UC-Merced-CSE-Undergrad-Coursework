@@ -1,0 +1,31 @@
+Lab 5 Logic Check
+
+Q1) The return type of sumAll() is long.
+
+Q2) Max must be less than or equal to the length of arr.
+
+Q3) squareSum methods also have a return type of long.
+
+Q4) Initializes all entries in the array to 0.
+
+Q5) Fibonacci return type is long.
+
+Q6) Fibonacci output starts at 2 because the index at 0 is 0 and the index at 1 is 1. It takes the values
+    of the first two numbers before it and adds them to get the value at 2.
+
+Q7) Factorial returns a long data type.
+
+Q8) Starts at 2 because the factorial of 0 is 0, and the factorial of 1 is 1. I just made a variable, lastValue
+    equal to 1 since the value before 2 was 1 and the factorial of 1 = 1. Then, I assigned lastValue * i 
+    into lastValue so that it would be equal to the lastValue times the index number in the for loop. The for loop
+    starts at 2, so lastValue * 2 = 2. This works out because the factorial of 2 is 2. lastValue is equal to 2 and
+    when the index of i is 3, it'll multiply 3 by the last value of 2 to get 6 which is the factorial of 3. The loop
+    goes on until the intended max value.
+
+Q9) It is declared as an array of longs because the values can get extremely big when you're squaring or multiplying
+    numbers by each other. That's why a long is more suited for things like factorials and squares.
+
+Q10)If maxsize was changed to 10, most of the method calls wouldn't work because for method calls in which the argument
+    max value was over 10, the methods wouldn't be able to calculate up to that value because the arrays go up to only 10.
+    For example, fib(arr, 10) would still work but fib(arr, 20) would not work because the value of max in fib(long[] arr, int max)
+    has to be equal to or less than the length of arr.

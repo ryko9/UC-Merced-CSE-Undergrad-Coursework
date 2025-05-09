@@ -1,0 +1,17 @@
+Lab 5 Questions
+
+Q1) .data tells the assembler that we are in the data segment
+	.text tells the assembler that we are in the text segment
+	.word stores 32-bit quantities in successive memory words
+Q2) To set a breakpoint, run the code then put a check under the breakpoint section for which line you want to break at.
+
+Q3) You can press F7 to step through, or press the button for stepping through one at a time.
+
+Q4) To modify the value of a register, you can click on the value and type in a new value.
+
+Q5) 0x1001000, 13th fibonacci number is 233.
+
+Q6) Syscall is used to request services from the kernel. 
+
+	1 is for print integer, 10 is for exit. The number is specified by loading it into v0.
+

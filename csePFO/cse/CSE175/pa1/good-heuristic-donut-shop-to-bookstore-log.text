@@ -1,0 +1,66 @@
+HEURISTIC SEARCH ALGORITHM COMPARISON
+Enter the name of the location file:
+small-locations.dat
+Enter the name of the road file:
+small-roads.dat
+Enter the name of the initial location:
+donut-shop
+Enter the name of the destination location:
+bookstore
+TESTING UNIFORM-COST SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT donut-shop.
+TAKE side-street FROM donut-shop TO coffee-shop.
+TAKE the-avenue FROM coffee-shop TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 19.900000.
+Number of Node Expansions = 62.
+TESTING UNIFORM-COST SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT donut-shop.
+TAKE side-street FROM donut-shop TO coffee-shop.
+TAKE the-avenue FROM coffee-shop TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 19.900000.
+Number of Node Expansions = 12.
+TESTING GREEDY SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT donut-shop.
+TAKE upper-main FROM donut-shop TO grocery-store.
+TAKE alley FROM grocery-store TO gym.
+TAKE long-drive FROM gym TO car-dealer.
+TAKE back-road FROM car-dealer TO truck-stop.
+TAKE highway-south FROM truck-stop TO bookstore.
+Path Cost = 37.600000.
+Number of Node Expansions = 5.
+TESTING GREEDY SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT donut-shop.
+TAKE upper-main FROM donut-shop TO grocery-store.
+TAKE alley FROM grocery-store TO gym.
+TAKE long-drive FROM gym TO car-dealer.
+TAKE back-road FROM car-dealer TO truck-stop.
+TAKE highway-south FROM truck-stop TO bookstore.
+Path Cost = 37.600000.
+Number of Node Expansions = 5.
+TESTING A* SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT donut-shop.
+TAKE side-street FROM donut-shop TO coffee-shop.
+TAKE the-avenue FROM coffee-shop TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 19.900000.
+Number of Node Expansions = 14.
+TESTING A* SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT donut-shop.
+TAKE side-street FROM donut-shop TO coffee-shop.
+TAKE the-avenue FROM coffee-shop TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 19.900000.
+Number of Node Expansions = 9.
+ALGORITHM COMPARISON COMPLETE

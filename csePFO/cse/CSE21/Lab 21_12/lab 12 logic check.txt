@@ -1,0 +1,33 @@
+Lab 12 Logic Check
+
+9.4.1
+1.) Scanner inSS = new Scanner(myStrLine); 
+2.) PrintWriter outSS = new PrintWriter(simpleStream); 
+3.) myStr = simpleStream.toString(); 
+
+9.5.1
+1.) The filestream has not been properly opened.
+2.) obFS = new FileOutputStream("outfile.txt");
+3.) outFS = new PrintWriter(obFS);
+4.) outFS.print("apples");
+
+
+Task 1
+1.) Each arraylist element is of type String
+2.) One object is created in line 4
+3.) Two pointers are used in line 4, Scanner and FileReader.
+4.) next() only reads input up until a space, whereas nextLine()
+reads until the end of the line
+5.) nextLine() is used to read until the end of the line. Delimiter "[\\s]" makes it
+so next() ignores whitespace.
+6.) FileNotFoundException happens when the file with the specified pathname
+does not exist.
+7.) NoSuchElementException occurs when you call next but the scanner
+no longer has a next element to provide, so it cannot perform input.next()
+8.) useDelimiter ignores the characters in the brackets
+9.) + and -
+10.) Pointer is returned\
+
+Task 3
+1.) input.useDelimiter("[\t\r]");
+2.) to handle multiple words, you need nextLine();

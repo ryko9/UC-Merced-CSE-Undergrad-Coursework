@@ -1,0 +1,55 @@
+David Wang
+CSE 140
+
+Homework 9
+1.)
+a.) D[j] amd D[j - 1] have loop carried dependencies at f4 in the current iteration and f0 in the next.
+b.)
+		     addiu $s2, $zero, 8000
+		     addiu $s1, $zero, 40
+	    Loop:   l.d $f0, -40($s1)
+		     l.d $f1, -32($s1)
+		     add.d $f2, $f0, $f1
+		     s.d $f2, -24($s1)
+		     add.d $f3, $f1, $f2
+		     s.d $f3, -16($s1)
+		     add.d $f4, $f2, $f3
+		     s.d $f4, -8($s1)
+		     add.d $f5, $f3, $f4
+		     s.d $f5, 0($s1)
+		     addiu $s1, $s1, 32
+		     bne $s1, $s2, Loop
+		     add.d $f1, $f4, $f5
+		     s.d $f1, -24($s1)
+		     add.d $f2, $f5, $f1
+		     s.d $f2, -16($s1)
+2.)
+
+a.)
+Core1		Core2
+A3		B1, B4
+A1, A2		B1, B4
+A1, A4		B2
+A1		B3
+
+b.)
+
+FU1	FU2
+A1	A2
+A1
+A1
+B1	B3
+A3
+A4
+B2
+B4
+
+c.)
+
+FU1	FU2
+A1	B1
+A1	B1
+A1	B2
+A2	B3
+A3	B4
+A4

@@ -1,0 +1,53 @@
+array2
+
+
+	reversing strings
+
+a b c -> c b a 
+0 1 2    2 1 0  indexes
+
+
+
+
+
+string input; //input to be reversed
+string reverse; //the reversed version of input
+
+output: Enter the string to reverse: 
+
+input: The reverse of the string is:
+
+for (int i = input - 1; i >= 0; i--)
+{
+	reverse += input[i];
+}
+
+output: reverse
+
+
+
+
+ex: David
+
+for loop would start with "d" and add that to reverse.
+"d" is at input.length - 1 since we count from 0
+for loop would start from input.length - 1 and decrement until we get to 0. 
+
+index 0 D  
+index 1 a
+index 2 v
+index 3 i
+index 4 d
+
+input.length would be 5 in the case of david.
+
+so the for loop would start at index 4, or input.length - 1. It would then go up until 0.
+
+i = 4 d, reverse += d
+i = 3 a, reverse += i
+i = 2 v, reverse += v
+i = 1 i, reverse += a
+i = 0 d, reverse += D
+
+input = "David"
+reverse = "divaD"

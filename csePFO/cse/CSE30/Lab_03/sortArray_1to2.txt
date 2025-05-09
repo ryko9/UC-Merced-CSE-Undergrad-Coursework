@@ -1,0 +1,52 @@
+pseudo sortArray1
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+output: Enter size of array
+input: arrSize
+
+if(size valid)
+	for loop to enter array values
+
+	selectionSort;
+
+	output: This is sorted array in ascending order, output: array 
+	output: The algorithm selected the maximum for the traverse of the array
+	
+
+else(size invalid)
+	output: ERROR
+	
+
+
+return 0;
+}
+
+
+SelectionSort Pseudo Code (used lecture pseudo)
+
+Algorithm SelectionSort(A, n) A = new array of n integers
+	for i = n - 1 to 1 do   // decrement i starting from n-1 to 1
+
+		Max = A[0]   // temporary maximum maxInd ? 0    // index of temporary maximum
+
+		for j = 1 to i do   // increment j starting from 1 to i
+
+			if A[j] > A[maxInd ] then  // if found new temp maximum Max = A[j]  // update the temporary maximum
+				maxInd = j            // update the index of the temporary maximum
+			end if 
+		end for
+
+		If maxInd != i then   // if they are not the same 
+			swap A[maxInd ] with A[i]  // swap them
+		end if
+	end for
+
+sortArray2 pseudo
+
+change Max to min, maxInd to minInd
+
+change if A[j] > A[maxInd] to A[j] < A[minInd]

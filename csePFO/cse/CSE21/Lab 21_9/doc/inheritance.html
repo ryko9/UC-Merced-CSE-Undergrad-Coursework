@@ -1,0 +1,102 @@
+<h1>CSE21 Lab 9: Inheritance</h1>
+
+<ol>
+<h2>Task 1: <tt>Counter.java</tt></h2>  <p>
+Counter class represents a counter that can be initialized and reset to 0,
+incremented by 1, and asked for its current value.
+</p>
+<pre>
+public class Counter {
+
+	private int myCount = 0;
+	
+	public void increment ( ) {
+		myCount++;
+	}
+	
+	public int value ( ) {
+		return myCount;
+	}
+	
+	public void reset ( ) {
+		myCount = 0;
+	}
+}
+</pre>
+<p>
+It doesn't have a <tt>main</tt> method; we'll use the class <tt>Runner</tt>  to run 
+and manipulate it.
+</p>
+
+<li>The Counter class doesn't have a constructor. Why doesn't it need one?</li>
+
+<li>The Counter class doesn't have a main. Why doesn't it need one?</li>
+
+<p>Using the provided <tt>Runner</tt> class, along with calls to <tt>Counter</tt> methods,
+create a counter whose value is 3 (This should go inside testCounter). <br><br>
+Create another counter that uses exactly seven calls to the <tt>reset</tt> and <tt>increment</tt>
+methods to end up with a value of 3 (This should go inside testCounter7Statements).</p>
+
+<p>
+
+
+<h2>Task 2: <tt>ModNCounter.java</tt></h2>  
+
+<p>&quot;Mod N&quot; counters count up to a specified amount (the &quot;N&quot;), 
+and then cycle back to zero, for example: 0, 1, 2, 0, 1, 2, 0, ... 
+(This is a &quot;mod N&quot; counter with N = 3.)</p>
+<p>A mod N counter has an extra instance variable&mdash;a good name for it is <tt>myN</tt>&mdash;and 
+is initialized with a 1-argument constructor whose argument is the intended <tt>myN</tt> value. 
+Thus the code </p>
+<pre>
+	ModNCounter c = new ModNCounter (2);
+	System.out.println (c.value ( )); 
+	c.increment ( );
+	System.out.println (c.value ( ));
+	c.increment ( );
+	System.out.println (c.value ( ));
+	c.increment ( );
+</pre>
+<p> 
+should print 0, then 1, then 0. 
+<br><br>
+
+Fill in ModNCounter so it has the behavior described here. You should only override the <tt>increment</tt> method and making no other changes
+to produce the desired behavior.
+</p>
+
+<li> How do we know ModNCounter inherits from Counter (what is the keyword)? </li>
+<li> Which method is the constructor inside ModNCounter class? </li>
+<li> Is cycleLength variable visible to the parent Counter class? </li>
+<li> What happens when we call <tt>value</tt> and <tt>reset</tt> methods for ModNCounter since it is not defined in ModNCounter? </li>
+
+<h2>Task 3: <tt>ModNCounter2.java</tt></h2>  
+
+</p> Create this class so it inherits from Counter. For this one, you should only override the <tt>value</tt> method and making no other changes
+to produce the desired behavior. For the class that's creating and using ModNCounter2, it should appear to be exactly the same but the 
+implementation is quite different. Be sure to include the line "package oop" at the top of this file. </p>
+<li>  What happens when we call <tt>increment</tt> and <tt>reset</tt> methods for ModNCounter since it is not defined in ModNCounter2?</li>
+<p> Implement a method to test ModNCounter2 in Runner so you know it's working. Be sure this new code is included in what you submit for Runner</p>
+
+<h2>Task 4: <tt>DecrementableCounter.java</tt></h2> 
+<p> One might wish for a counter that allows decrementing its value as well as incrementing it.
+Create a class <tt>DecrementableCounter</tt> that inherits from <tt>Counter</tt>
+and provides a <tt>decrement</tt> method.
+If the counter's value is 0, a call to <tt>decrement</tt> should have no effect.
+Otherwise, it should reduce the counter's value by 1.
+Don't change the <tt>Counter</tt> class to implement <tt>decrement</tt>. </p>
+
+<li>Does <tt>decrement</tt> exists inside Counter?</li>
+<li>Does <tt>increment</tt>'s behavior change for DecrementableCounter?</li>
+
+<h2>Task 5: <tt>SeasonCounter.java</tt></h2> 
+<p>
+Complete a <tt>SeasonCounter</tt> class that cycles through the four seasons.
+It will inherit from <tt>ModNCounter</tt>, overriding the <tt>toString</tt> method
+to return "spring", "summer", "fall", or "winter",
+depending on whether the current value is 0, 1, 2, or 3.
+</p>
+
+<li>Where is <tt>toString</tt> being inherited from?</li>
+
+</ol>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The game of Pig</title>
+<style type="text/css">
+.green {
+	color: green
+}
+
+.indent {
+	margin-left: 15pt
+}
+
+.task {
+	margin-left: 20pt;
+	border-left: 12px solid #BF9A6B;
+	padding: 0px 10px 0px 10px
+}
+
+h3 {
+	margin-top: 35pt;
+}
+</style>
+</head>
+<body>
+    <h1>The game of Pig</h1>
+    <p>
+        Consider the game of 2-player Pig, described in <a
+            href="http://en.wikipedia.org/wiki/Pig_(dice_game)">
+            Wikipedia</a> as follows:
+    </p>
+    <p>Each turn, a player repeatedly rolls a die until either a 1
+        is rolled or the player decides to "hold":</p>
+    <ul>
+        <li>If the player rolls a 1, he or she scores nothing and
+            it becomes the next player's turn.</li>
+        <li>If the player rolls any other number, it is added to
+            his or her turn total and the player's turn continues.</li>
+        <li>If a player chooses to "hold", the player's turn total
+            is added to his or her score, and it becomes the next
+            player's turn.</li>
+    </ul>
+    <p>The first player to score 100 or more points wins.</p>
+    <p>For example, the first player, Ann, begins a turn with a roll
+        of 5. Ann could hold and score 5 points, but chooses to roll
+        again. Ann rolls a 2, and could hold with a turn total of 7
+        points, but chooses to roll again. Ann rolls a 1, and must end
+        her turn without scoring. The next player, Bob, rolls the
+        sequence 4-5-3-5-5, after which he chooses to hold, and adds his
+        turn total of 22 points to his score.</p>
+    <h3>
+        <code>PigSimulator.java</code>
+    </h3>
+    <p>
+        The program <tt>PigSimulator.java</tt> contains code to <i>simulate</i>
+        playing of several games of Pig. The <code>main</code> method
+        initializes variables to keep track of how many games each
+        player won. Then it repeatedly calls the <tt>play1game</tt>
+        method to play a single game, alternating between the two
+        players, stopping when one of the players reaches 100 points.
+        The <tt>play1turn</tt> method simulates the roll of the die, and
+        calls a method on the <code>Player</code> named <tt>tallyRoll</tt>
+        to implement the various events listed above.
+    </p>
+    <p>
+        The <tt>Player</tt> class keeps track of the die rolls in a
+        turn, and contains a method named <tt>throwAgain</tt> that
+        represents a <i>strategy</i> for playing the game. By supplying
+        subclasses for <tt>Player</tt> that override the <tt>throwAgain</tt>
+        method, one can test different strategies against one another. A
+        strategy may be based on a player's total score, the number of
+        rolls made so far in the turn, or the total accumulated so far
+        in the turn.
+    </p>
+    <h3>Assignment</h3>
+    <ol>
+        <li class="task">
+            <h4>Task 4</h4>
+            <p>
+                The current program refers to <tt>ConservativePlayer</tt>
+                and <code>RiskyPlayer</code> classes. Write these two
+                classes, such that a <code>ConservativePlayer</code>
+                will always choose to hold and a <tt>RiskyPlayer</tt>
+                will never hold.
+            </p>
+            <p>
+                If you need to, create a class <code>PlayerRunner</code>
+                in which you test your <tt>ConservativePlayer</tt> and <code>RiskyPlayer</code>
+                classes.
+            </p>
+        </li>
+        <li class="task">
+            <h4>Task 5</h4>
+            <p>
+                Think about which of these players will play a better
+                game of Pig. Simulate several games (by executing <code>main</code>
+                of <code>PigSimulator.java</code>) pitting them against
+                each other, and report what happened. Was your
+                prediction correct?
+        </li>
+        <li class="task">
+            <h4>Task 6</h4>
+            <p>
+                Think of two other strategies and design players (by
+                extending <code>Player</code>) that implement them.  
+                Create or augment a class <code>PlayerRunner</code> that tests your 
+                implementations.  
+            </p>
+        </li>
+        <li class="task">
+            <h4>Task 7</h4>
+            <p>Test all four players against each other, which will
+                take several simulations. Explain what happened. How did
+                your strategies do? Did you expect to see the results you saw?</p>
+        </li>
+    </ol>
+</body>
+</html>

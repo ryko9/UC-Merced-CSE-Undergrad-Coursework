@@ -1,0 +1,157 @@
+HW4
+David Wang
+CSE31
+
+Problem 1)
+
+	2.14)
+
+	opcode: 000000
+	rs: 10000
+	rt: 10000
+	rd: 10000
+	shamt: 00000
+	funct: 100000
+
+	add $s0, $s0, $s0
+
+	The instruction is R-type
+
+	2.15)
+
+	sw $t1, 32($t2)
+
+	opcode: 101011
+	rs: 01010
+	rt: 01001
+	immediate: 0000 0000 0010 0000
+
+	The instruction is I-type
+
+	hexadecimal: 0xAD490020, binary: 1010 1101 0100 1001 0000 0000 0010 0000
+
+	2.16)
+
+	opcode: 000000
+	rs: 00011 
+	rt: 00010
+	rd: 00011
+	shamt: 00000
+	funct: 100010
+
+	The instruction is R-type
+
+	sub $v1, $v1, $v0
+
+	0000 0000 0110 0010 0001 1000 0010 0010
+
+	2.17)
+
+	opcode: 100011
+	rs: 00001
+	rt: 00010
+	immediate: 0000 0000 0000 0100
+
+	The instruction is I-type
+
+	lw $v0, 4($at)
+
+	1000 1100 0010 0010 0000 0000 0000 0100
+
+	2.34)
+
+	f:  addi $sp, $sp, -4
+		sw $ra, 0($sp)
+		jal func 				#call func(a,b)
+
+		add $a0, $v0, $s0 		#assume v0 is result of func(a,b), and set new a0 for second func call
+		add $a1, $a2, $a3 		#a1 = c + d
+
+		jal funct               #second func call takes in a0 and a1, which are (func(a,b) and c + d)
+
+		lw	$ra, 0($sp)
+		addi $sp, $sp, 4
+		jr $ra
+
+	2.36)
+
+	$t5 is not used in the function, so it could be any number
+	$ra is equal to the return address
+	$sp and $s3 are not modified throughout the function
+
+	2.37)
+
+	strToInt:					# convert string to integer
+		li	$t5, 0x2B			# $t5 = '+'
+		li	$t6, 0x30			# $t6 = '0'
+		li	$t7, 0x39			# $t7 = '9'
+		li	$v0, 0				# initialize $v0 = 0
+		add	$t0, $0, $a0			# $t0 = pointer to string
+		lbu	$t1, 0($t0)			# load $t1 = sign character
+		add	$t3, $t1, $0			# $t3 = sign character
+		addiu	$t0, $t0, 1			# point to next char
+		lbu	$t1, 0($t0)			# load $t1 = digit character
+	loop:
+		slt	$t2, $t1, $t6			# char < '0'
+		bne	$t2, $0, end
+		slt	$t2, $t1, $t7			# char > '9'
+		beq	$t2, $0, end
+		subu	$t1, $t1, $t6			# convert char to integer
+		mul	$v0, $v0, 10			# multiply by 10
+		add	$v0, $v0, $t1			# $v0 = $v0 * 10 + digit
+		addiu	$t0, $t0, 1			# point to next char
+		lbu	$t1, 0($t0)			# load $t1 = next digit
+		bne	$t1, $0, loop			# branch if not end of string
+		bne	$t3, $t5, else		# if $t3 != '+', go to negative
+		jr	$ra				# return integer value
+	else:
+		sub	$v0, $0, $v0			# -$v0
+		jr	$ra				# return integer value
+	end:
+		li	$v0, -1				# return -1 in $v0
+		jr	$ra
+
+	2.39)
+
+	lui	$t0, 0x2001		# sets $t0 = 0010 0000 0000 0001 0000 0000 0000 0000two
+	ori	$t0, 0x4924		# sets $t0 = 0010 0000 0000 0001 0100 1001 0010 0100two 
+	add	$t1, $t0, $0		# saves $t0 in $t1 ( $t0 = 0x20014924)
+
+	2.40) We can't use a single jump instruction, since the jump address range is from 0xF8000004 to 0x08000003
+
+	2.41) Can't use a single branch instruction since the range is from 0xFFFFE604 to 0x00020600
+
+	2.42) We can use a single branch instruction here because it is within the range 0x1FFDF004 to 0x2001F000
+
+Problem 2)
+
+The stored program concept is the concept that programs can be stored as binary numbers in memory so instructions can be modified by the computer
+
+Self modifying code would have to use jumps to modify its own instructions
+
+The PC is an acronym for personal computer
+
+Problem 3)
+
+R format: 
+
+6 bits for opcode, 5 bits for rs, 5 bits for rt, 5 bits for rd, 5 bits for shamt, 6 bits for funct
+
+I format: 6 bits for op, 5 bits for rs, 5 bits for rt, 	16 bits for address/immediate
+
+J format: 6 bits for opcode, and 26 bits for target address
+
+
+There are 64 possible instructions for R-format
+
+We could add more instructions by using bits from other fields
+
+Problem 4)
+
+Absolute addressing is constant, whereas relative addressing is variable
+
+Word alignment means that addresses have to be divisible by 4, since a word is equal to 4 bytes
+
+j and jal use 6 bits for opcode, so there are 
+
+

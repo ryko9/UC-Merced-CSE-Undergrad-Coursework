@@ -1,0 +1,35 @@
+Lab 2 Questions
+
+    1) To run a program in gdb, you need to first compile it with the -g tag
+    and then start gdb with "gdb ./executablename:. Then you can run the
+    program with "(gdb) run"
+
+    2) If the program takes arguments, you can run the program with "(gdb) run arg1 arg2", with arg1 and arg2 being the parameters being passed through
+
+    3) To set a breakpoint in the program with gdb, you can do "(gdb) break garbage.c:" and then after the colon specify which line to break at, e.g: line 8 or main
+
+    4) To break when a specific condition is met, you can do "break ... if (expression)" with expression being the condition like x = 3 for example.
+
+    5) To execute the next line after a breakpoint, "(gdb) s"
+
+    6) To execute a function call, use "(gdb) next"
+
+    7) To continue after breaking, use "(gdb) continue"
+
+    8) To show the value of a variable/expression after every step, "(gdb) print [/f] expr" where f is the format and expr is the variable/expression
+
+    9) To show the value after every step, we do "(gdb) display [/f] expr"
+
+    10) To display all variables, "(gdb) display"
+
+    11) To exit, "(gdb) quit"
+
+    12) In the for loop, change (k = 0; k < s2len; k++) to (k - 0; k < s2len + 1; k++) so there is enough space
+
+    13) line 10, scanf(%d, input)
+
+    14) the scanf had input instead of &input, it should be scanf("%d", &input)
+
+    15) Changed the parameter for read_values to (*sum) because sum is not returned by the function, while values is. So in order to modify sum without returning it,
+	we change the value directly through pointers.
+	

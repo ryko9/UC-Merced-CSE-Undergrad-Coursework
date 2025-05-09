@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            CSE 21 lab 3
+        </title>
+        <meta name="generator" content="BBEdit 10.5" />
+    </head>
+    <body>
+        <h1> Baseball score processing, part 2 (Using Arrays) </h1>
+        <h3> Problem </h3>
+        <p>
+            Add code to the program to print the box score of a completed game like a normal Boxscore.
+            The first line of output will contain the runs scored in each inning
+            by the visiting team, and the second line will contain the runs scored
+            in each inning by the home team. The number of characters in each line
+            should be the same, except that the box score of a game where the home team is winning
+            at the start of the second half of the ninth inning should have nine characters
+            in the first line and eight characters in the second.
+            Assume that no more than nine runs are scored in any inning, and that the game
+            ends after at most twenty innings.
+            Do not include any blank characters in the output.
+        </p>
+        <p>
+            Here are some examples:<font color="red"> <b>(Text in red denotes user input)</b></font>
+        </p>
+        <table border="1">
+            <tr>
+                <td width="50%"><i>game description</i></td><td width="10%"><i>Expected output</i></td>
+            </tr>
+            <tr>
+                <td> Visitors score 1 run in the fifth inning and 3 in the seventh inning;
+                the home team scores 2 in the first inning and 1 in the ninth inning.</td>
+                <td>                <pre>
+<font color="red"> <b>0 2 0 0 0 0 0 0 1 0 0 0 3 0 0 0 0 1</b></font>
+ Visitor: 0 0 0 0 1 0 3 0 0 
+    Home: 2 0 0 0 0 0 0 0 1 
+ The visiting team won 4 to 3 in 9 innings.
+</pre></td>
+            </tr>
+            <tr>
+                <td> Visitors score 1 run in the fifth inning and 1 in the seventh inning;
+                the home team scores 3 in the first inning.</td>
+                <td>                <pre>
+<font color="red"> <b>0 3 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0</b></font>
+ Visitor: 0 0 0 0 1 0 1 0 0 
+    Home: 3 0 0 0 0 0 0 0 
+ The home team won 3 to 2 in 9 innings.
+</pre></td>
+            </tr>
+            <tr>
+                <td> Visitors score 1 run in the fifth inning and 1 in the seventh inning;
+                the home team scores 2 in the first inning and 2 in the eleventh inning.</td>
+                <td>                <pre>
+<font color="red"> <b>0 2 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 2</b></font>
+ Visitor: 0 0 0 0 1 0 1 0 0 0 0 
+    Home: 2 0 0 0 0 0 0 0 0 0 2 
+ The home team won 4 to 2 in 11 innings.
+</pre></td>
+            </tr>
+            <tr>
+                <td> Visitors score 1 run in the fifth inning, 1 in the seventh inning,
+                2 in the eleventh and thirteenth innings;
+                the home team scores 2 in the first inning, 2 in the eleventh inning,
+                and 1 in the thirteenth inning.</td>
+                <td>                <pre>
+<font color="red"> <b>0 2 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 2 2 0 0 2 1</b></font>
+ Visitor: 0 0 0 0 1 0 1 0 0 0 2 0 2 
+    Home: 2 0 0 0 0 0 0 0 0 0 2 0 1 
+ The visiting team won 6 to 5 in 13 innings.
+</pre></td>
+            </tr>
+        </table>
+        
+        <ol>
+        <h2>Task 1: <tt>initialize</tt></h2>
+		<p> Fill-in the body of <tt>initialize</tt> method and answer the Assessment questions below. You may find that 
+		answering the questions first or during this step is really useful in figuring out how to write initialize correctly.</p>
+
+            <li>
+                What does <tt>final</tt> mean in the declaration of MAX_BOX_SCORE_LENGTH?
+            </li>
+            
+            <li>
+   				What would happen if you try to change the value of MAX_BOX_SCORE_LENGTH inside <tt>initialize</tt>?         
+            </li>
+            <li>
+   				What would be the value of the array entries if you did not initialize each entry to SENTINEL?         
+            </li>
+            <li>
+   				How would uninitialized array differ from a game of MAX_BOX_SCORE_LENGTH (or 20) innings?
+            </li>
+             <li>
+   				Given your above answers, what are possible values for SENTINEL if the score in each half inning is guaranteed to be <= 9?
+            </li>
+        <h2>Task 2: <tt>readScores</tt></h2>
+	
+            <p>
+                Add code to <tt>readScores</tt> to fill in the arrays for visitor and home teams in appropriate entry. This should be very similar
+                to your solution for lab 2, except that instead of one variable holding the current score, it saves every single entry. 
+            </p>
+            
+            <li>
+   				Show the lines you modified in this lab compared to Lab 2 inside <tt>readScores</tt>.
+            </li>
+
+		<h2>Task 3: <tt>gameScore</tt></h2>            
+            <p>
+            	We have provided <tt>gameScore</tt> method for you that takes an array and calculate the total of all the values in the array. 
+            	It is smart enough to skips over SENTINEL values for each of the entries. In this step, you should analyze the code provided 
+            	and answer the Assessment questions below. 
+            </p>
+            
+            <li>
+   				Explain how <tt>for (int v : teamBoxScore)</tt> line work by going through the array (i.e. what is v?)
+            </li>
+            <li>
+   				How can the parameter <tt>teamBoxScore</tt> be used for both visitorScores and homeScores arrays?
+            </li>
+            <li>
+   				If the array is MAX_BOX_SCORE_LENGTH, how many iterations would this for-loop go through?
+            </li>
+            <p>
+   				<b>Modify</b> the body of the loop so the iterations match the innings played instead of going through 
+   				the whole array every single time, regardless of the actual innings. (Hint: think about what 
+   				it means to have the SENTINEL value in the entry)
+            </p>
+
+		<h2>Task 4: <tt>printBoxScore</tt></h2>
+            <p>
+                Fill-in <tt>printBoxScore</tt>,
+                so that it prints the box score correctly.
+                Assume that no more than nine runs are scored in any inning.
+                Don't print any blank characters.
+            </p>
+            <li>
+   				Are there any similarities in your implementation of <tt>printBoxScore</tt> to <tt>gameScore</tt>? 
+            </li>
+            <li>
+            	How do they differ?
+            </li>
+
+		<h2>Task 5: <tt>result</tt></h2>
+            <p>
+                Add calls to the <tt>printBoxScore</tt>
+                method in <tt>result</tt> in the proper place for both Visitor and Home team so it matches the expected output. 
+                Also put in appropriate print statements so the output shows which line belongs to the visitor versus home teams. 
+            </p>
+            <li>
+   				What is the effective minimum number of calls to <tt>gameScore</tt> in <tt>result</tt>?
+            </li>
+            <li>
+   				What is the effective maximum number of calls to <tt>gameScore</tt> in <tt>result</tt>?
+            </li>
+            <p>
+                <b>Minimize</b> the number of times <tt>gameScore</tt> is being called in <tt>result</tt> by modifying the code. Hint: Use variables
+            </p>
+            
+        <h2>Task 6: <tt>gameIsOver</tt></h2>
+            <p> We have provided <tt>gameIsOver</tt> method which works with the arrays. </p>
+            <li>
+   				What is the effective minimum number of calls to <tt>gameScore</tt> in <tt>gameIsOver</tt>?
+            </li>
+            <li>
+   				What is the effective maximum number of calls to <tt>gameScore</tt> in <tt>gameIsOver</tt>?
+            </li>
+
+            <p>
+            <b>Minimize</b> the number of times <tt>gameScore</tt> is being called in <tt>gameIsOver</tt> by modifying the code. Hint: Use variables
+            </p>
+
+        </ol>
+
+    </body>
+</html>

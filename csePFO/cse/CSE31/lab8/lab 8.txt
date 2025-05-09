@@ -1,0 +1,10 @@
+CSE 31
+Lab 8
+David Wang
+
+1.) x = 0x7F7FFFFF
+2.) x = 0x4B800000
+3.) num1 = .word 0x4B800000
+    num2 = .word 0x4B800000
+    num3 = .word 0x40000001
+4.) Floating point numbers dont have associativity.

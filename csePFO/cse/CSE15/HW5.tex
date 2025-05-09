@@ -1,0 +1,106 @@
+David Wang
+CSE15
+Homework 5
+
+
+
+
+In order to do the Diffie-Hellman Key Exchange, we first need two public keys, p and g.
+
+In this case, p = 9433, and g = 5.
+
+Then both people have to choose a private random number. You chose 'a', and I would have to choose 'b'.
+
+With your private key 'a', you computed A = (g ^ a) mod p and gave the result, A = 1218, to me.
+
+In exchange, I would use my private key 'b', and compute B = (g ^ b) mod p. And give that result B to you.
+
+To calculate the common secret key, you would use my transmitted number B and calcalate  K = B^a mod p.
+
+I would use your transmitted key A to calculate K = A^b mod p.
+
+In the end, we should both end up with the same value for K.
+
+1.) 
+
+Since you gave me A = 1218, I would have to give you a value for B after choosing my secret key 'b' and calculating B = g^b mod p.
+
+Then I would calculate the key using K = A^b mod p and you would calculate K using K = B^a mod p.
+
+We should end up with the same K.
+
+Assuming I chose the value b = 2, 
+
+I would calculate K = A^b mod p to get the key.
+
+K = (1218)^(2) mod 9433 = 2543
+
+Since B = g^b mod p, using my value of 2
+
+B = 5^2 mod 9433 = 25
+
+For you to calculate the key,
+
+K = B^a mod p
+
+= 25^ a mod 9433
+
+Since our values for K should be the same, we would need some value for a such that 25^a mod 9433 would also equal 2543.
+
+2.)
+
+If Trudy and Eve knew that p = 9433, g = 5 and your transmitted value of A = 1218 
+
+They would have to figure out what your private key 'a' was such that 
+
+A = 1218 = g^a mod P
+
+B = g^b mod p 
+
+B^a mod p = A^b mod p.
+
+Assuming my value of b were 2,
+
+they would just have to do K = A^b mod p
+
+K = 1218^2 mod 9433
+
+and get the result K = 2543.
+
+Assuming I used b for mod p.
+
+3.)
+
+The value of your K would be different depending on what I chose for the value of b.
+
+Assuming my private key 'b' was 2,
+
+B = g^b mod p
+= 5^2 mod 9433 = 25
+
+I would give that value of 25 to you, and you would calculate K = 25^a mod 9433
+
+a would have to be a value such that 
+
+B^a mod 9433 = A^b mod 9433
+
+Since I chose b = 2,
+
+25^a mod 9433 = 1218^2 mod 9433
+
+If I had  chosen differently, the B I transmitted to you would have been different. And since your K relies on B, it would have been different.
+
+In order to calculate a itself,
+
+we have A = g^a mod p
+
+and we know A = 1218, g = 5 and p = 9433
+
+1218 = 5^a mod 9433
+
+Solve algebraically to find a.
+
+
+
+
+
