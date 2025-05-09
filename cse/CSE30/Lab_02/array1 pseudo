@@ -1,0 +1,51 @@
+array1
+
+
+
+int arrSize; //for storing size of array
+bool increasing = true; //boolean to see if the array is increasing or not
+
+output: "Enter the size of the array: "
+input : arrSize
+
+
+if(input is valid then continue)
+
+{	
+	int arr[arrSize]; //create array with the inputted size	
+	output: "Enter the numbers in the array, seperated by a space, and press enter: "
+
+	//assuming input is valid, then the user can input array values. 	
+
+	for loop until max arrSize //for loop to store values
+	{
+		//each increment will store corresponding index value to the element of the array	
+	}
+
+	for loop to check if array is increasing
+	{
+		if(i > i + 1)		//if any consecutive values are found to be decreasing, increasing = false
+		increasing = false;
+	}	
+
+	if (increasing = true)	
+	{
+	output: "This IS an increasing array!" endl;
+	}nano ar
+	else
+	{
+	output: "This is not an increasing array! endl;
+	}
+
+}
+
+else (if input is invalid)
+	output: You entered an incorrect value for the array size!
+
+
+
+	to check if the array is increasing:
+
+for 
+]
+ "E

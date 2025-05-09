@@ -1,0 +1,11 @@
+Lab 1 Logic Check
+
+David Wang CSE 030
+
+1.) To change the name from main to cselab enter, "mv main cselab". 
+
+2.) When you compile g++ <source> only it doesnt make an executable.
+
+3.) Without the line "using namespace std;", you would have to include std:: in front of cout and cin.
+
+e.g std:cout << "Hello World";

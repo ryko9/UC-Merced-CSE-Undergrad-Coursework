@@ -1,0 +1,58 @@
+HEURISTIC SEARCH ALGORITHM COMPARISON
+Enter the name of the location file:
+small-locations.dat
+Enter the name of the road file:
+small-roads.dat
+Enter the name of the initial location:
+home
+Enter the name of the destination location:
+bookstore
+TESTING UNIFORM-COST SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT home.
+TAKE central FROM home TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 15.300000.
+Number of Node Expansions = 64.
+TESTING UNIFORM-COST SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT home.
+TAKE central FROM home TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 15.300000.
+Number of Node Expansions = 10.
+TESTING GREEDY SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT home.
+TAKE central FROM home TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 15.300000.
+Number of Node Expansions = 3.
+TESTING GREEDY SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT home.
+TAKE central FROM home TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 15.300000.
+Number of Node Expansions = 3.
+TESTING A* SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT home.
+TAKE central FROM home TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 15.300000.
+Number of Node Expansions = 7.
+TESTING A* SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT home.
+TAKE central FROM home TO bus-station.
+TAKE highway-north FROM bus-station TO fast-food.
+TAKE highway-east FROM fast-food TO bookstore.
+Path Cost = 15.300000.
+Number of Node Expansions = 7.
+ALGORITHM COMPARISON COMPLETE

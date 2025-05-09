@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ArrayLists used with inheritance</title>
+<style type="text/css">
+.green {
+	color: green
+}
+
+.indent {
+	margin-left: 15pt
+}
+
+.task {
+	margin-left: 20pt;
+	border-left: 12px solid #BF9A6B;
+	padding: 0px 10px 0px 10px
+}
+
+h3 {
+	margin-top: 35pt;
+}
+</style>
+</head>
+<body>
+    <h3>
+        Introduction to <code>ArrayList</code>
+    </h3>
+    <p>
+        The <code>java.util</code> class library contains a variety of
+        useful classes. One is the <code>ArrayList</code> class, which
+        represents a list of elements that can be accessed by position
+        as with an array. An <code>ArrayList</code>, however, can only
+        contain objects from a specific class. To specify the class that
+        an <code>ArrayList</code> holds, you use <code>&lt;</code> and <code>&gt;</code>
+        to enclose the class name, like:
+    </p>
+
+    <pre>
+        ArrayList&lt;String&gt;     <span class="green">//can contain a list of strings</span>
+</pre>
+
+
+    <p class="indent">
+        <b><i>Can an <code>ArrayList</code> contain <code>int</code>
+                data?
+        </i></b> Not directly, no. An <code>ArrayList</code> can only contain
+        objects from a particular class, and an <code>int</code> is not
+        an object but a <i>primitive</i>: <code>int</code>s don't have
+        methods, can't be extended through inheritance, and so forth.
+        So,
+    </p>
+    <pre>
+        ArrayList&lt;int&gt;        <span class="green">//error!</span>
+</pre>
+    <p class="indent">will cause a compile error in Java.</p>
+    <p class="indent">
+        <b><i>Could one <code>ArrayList</code> contain both <code>ModNCounter</code>
+                and <code>SeasonCounter</code> objects?
+        </i></b>. Remember, an <code>ArrayList</code> contains only objects from
+        a single class. However, because of inheritance both of these
+        objects are members of <code>Counter</code>, and can be
+        contained in
+    </p>
+    <pre>
+        ArrayList&lt;Counter&gt;    <span class="green">//OK</span>
+</pre>
+
+
+    <div class="task">
+        <h4>Task 1</h4>
+        <p>Consider the following classes in a Java program, with
+            the methods defined in each:</p>
+        <ul style="font-family: monospace;">
+            <li><code>Pet</code> <br />&nbsp;eat() <br />&nbsp;sleep()<br>
+
+                <ul>
+                    <li>Dog <i>extends</i> Pet<br>
+                        &nbsp;goForAWalk()<br> &nbsp;bark() <br>
+                        <ul>
+                            <li>Pomeranian <i>extends</i> Dog<br>
+                                &nbsp;yap()
+                            </li>
+                            <li>GreatDane <i>extends</i> Dog<br>
+                                &nbsp;woof()
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Cat <i>extends</i> Pet<br>
+                        &nbsp;meow()
+                        <ul>
+                            <li>Siamese <i>extends</i> Cat<br>
+                                ignoreYou()
+                            </li>
+                        </ul>
+                    </li>
+                </ul></li>
+        </ul>
+        <p>
+            For each of the questions below, answer with an ArrayList
+            declaration with the most specific type, if any, that can
+            work. For instance, the ArrayList that could contain <code>Cat</code>
+            objects is <code>ArrayList&lt;Cat&gt;</code>
+        </p>
+        <ol>
+            <li>contain <code>Pomeranian</code> objects
+            </li>
+            <li>contain <code>Pomeranian</code> and <code>Cat</code>
+                objects
+            </li>
+            <li>contain objects of any of the above types that you
+                can call the <code>eat()</code> method on.
+            </li>
+            <li>contain <code>GreatDane</code> objects that you
+                will only call the <code>sleep()</code> method on
+            </li>
+            <li>contain <code>Pomeranian</code> and <code>Siamese</code>
+                objects
+            </li>
+            <li>contain <code>Pomeranian</code> and <code>Siamese</code>
+                objects that you will call <code>yap()</code> and <code>ignoreYou()</code>,
+                as appropriate
+            </li>
+        </ol>
+    </div>
+
+    <h3>
+        <code>ArrayList</code> methods
+    </h3>
+
+    <p>
+        The <code>ArrayList</code> class has numerous methods; we will
+        use several in this lab.
+    </p>
+    <ul>
+        <li><code>boolean add(<i>Object</i> obj)
+        </code><br> Appends the specified element to the end of this list.
+            You don't have to worry about the current size of the list,
+            it will expand as you add elements, as necessary. Returns <code>true</code>,
+            since an <code>ArrayList</code> always adds when asked to.</li>
+        <li><code>boolean remove(Object o)</code><br> Removes
+            a single instance of the specified element from this list,
+            if it is present. Returns <code>true</code> if an element
+            was removed.</li>
+        <li><code>int size()</code><br> Returns the number of
+            elements in this list.</li>
+    </ul>
+
+    <p>
+        The <code>Object</code> class in <code>add()</code> should be
+        the class that you defined the <code>ArrayList</code> with. For
+        instance, an <code>ArrayList</code> declared with
+    </p>
+    <pre>
+       ArrayList&lt;String&gt; myList = new ArrayList&lt;String&gt;();</pre>
+    <p>would be able to</p>
+    <pre>
+       myList.add("a string")        <span class="green">// OK</span>
+    </pre>
+    <p>but not (for instance)</p>
+    <pre>
+       myList.add(new Counter())     <span class="green">// this will fail with myList declaration above</span>
+       myList.add(5)                 <span class="green">// this will fail with myList declaration above</span>
+    </pre>
+
+
+
+    <h3>
+        <code>ArrayList</code> exercises
+    </h3>
+    <p>
+        Consider an <code>ArrayList</code> initialized as follows.
+    </p>
+    <pre>
+	ArrayList&lt;String&gt; words = new ArrayList&lt;String&gt; ( );
+
+	</pre>
+    <div class="task">
+        <h4>Task 2</h4>
+        <p>What is the result of executing the code below? Show all
+            the results after every line of code.</p>
+        <pre>
+	words.add ("a");
+	words.add ("b");
+	words.add ("c");
+	words.remove ("b");
+	words.add ("d");
+	words.remove ("a");
+	words.add ("e");
+	words.remove ("b");
+	words.add ("d");
+	words.remove ("c");
+	words.remove ("d");
+</pre>
+    </div>
+    <h3>Programming exercise</h3>
+    <div class="task">
+        <h4>Task 3</h4>
+        <p>
+            Using inheritance, define a class <code>TrackedArrayList</code>
+            that behaves just like the <code>ArrayList</code> class
+            except that it has an extra method:
+        </p>
+        <pre>
+	public int maxSizeSoFar ( );
+</pre>
+        <p>which returns the maximum number of elements in this list
+            at any time since the list was constructed.</p>
+    </div>
+    <p>For example, if <code>maxSizeSoFar</code> were called immediately after
+        each call in the code sequence in Task 2 above, it would return the
+        following values:</p>
+
+    <pre>
+	1
+	2
+	3
+	3
+	3
+	3
+	3
+	3
+	4
+	4
+	4
+</pre>
+    <p>
+        Use the framework code in <code>arraylist/TrackedArrayList.java</code> to
+        get started. You'll see the special format you'll use when
+        extending ArrayList, in order to refer to the class of the
+        elements that it can contain.
+    </p>
+    <p>Use the class <code>ArrayListRunner.java</code> to test your work as you go,
+    if you need to.  You may find that the EduRide feedback tool gives you enough information
+    to solve this task; if so, you'll need to comment on the specific feedback that 
+    you found useful.
+    </p>
+    <p>
+        Take advantage of the <code>ArrayList</code> methods and
+        variables as much as possible, using calls to <code>super</code>,
+        rather than reinventing the wheel.
+    </p>
+</body>
+</html>

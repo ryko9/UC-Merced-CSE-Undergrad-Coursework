@@ -1,0 +1,61 @@
+Lab 6 Questions
+
+Q1) A method is a constructor if it has no type like static or void and has the same name as the class.
+
+Q2) No, because it has void. Instead, it would be a method.
+
+Q3) No, because if it were private the methods could not be called from another class. If it were void, it wouldn't
+return anything.
+
+Q4) Yes, because setting the name does not require returning anything it simply assigns the argument from the method call
+into the specified class variable.
+
+Q5) Instance variables are different per object, while class variable are the same throughout the whole class/objects.
+
+Q6) name = name would assign the value of the argument "name" into the class variable "name". However, in order to have
+different names for each instance of the object you would need to use this.name = name.
+
+Q7) You can tell by looking at the number of arguments being passed through the method call.
+
+Q8) The dot operator allows you to access instance members of an object.
+
+Q9) No, because there are different instances.
+
+Q10) if (redo == 1)
+    run();
+
+If the user enters 1 to redo an order, it'll call the run method again inside of the if statement.
+
+Level of Understanding Assessments
+
+1.) this refers to the instance variable for the object that is being called.
+2.) 3, because there's three types of cheese created in the form of three objects.
+3.) name = name; 
+
+where the first name refers to the class variable name and the second name refers to the argument passed
+through the method.
+
+7.2.3
+
+1.) RunnerInfo runnerJoe = new RunnerInfo();
+2.) RunnerInfo firstRunner = new RunnerInfo();
+    RunnerInfo secondRunner = new RunnerInfo();
+3.) runner1.setTime(100);
+4.) 4.5
+
+7.4.1
+
+1.) public BoardMeasurement(){
+2.) boardLength = 0.0;
+    boardWidth = 0.0;
+    boardThickness = 0.0;
+
+7.7.2
+
+1.) FlightInfo flightPlan;
+2.) flightPlan = new FlightInfo();
+
+7.7.4
+
+1.) True
+2.) True

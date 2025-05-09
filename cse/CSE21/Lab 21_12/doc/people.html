@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>List of People</title>
+<style type="text/css">
+.green {
+	color: green
+}
+
+.indent {
+	margin-left: 15pt
+}
+
+.task {
+	margin-left: 20pt;
+	border-left: 12px solid #BF9A6B;
+	padding: 0px 10px 0px 10px
+}
+
+h3 {
+	margin-top: 35pt;
+}
+</style>
+</head>
+<body>
+    <h3>
+        Making an ArrayList of People
+    </h3>
+    <p>
+        We will practice using more Arraylist to create another list of objects. This time it will be a list of person objects, ie people.
+        First you will have to complete the class definition of a Person object. Then by utilizing an arrayList keep track of all the people 
+        listed in different files. 
+    </p>
+
+    <div class="task">
+        <h4>Task 2: Person.java</h4>
+
+        <p>
+            Take a look at Person.java. It has 3 private variables: name, age and location. Fill-in or fix all the methods inside this Class.
+
+        </p>
+    </div>
+
+	
+
+    <div class="task">
+        <h4>Task 3: People.java</h4>
+        <p> This program works by reading information about each person inside the file. There are three traits for each person: name, age and location. You need to create a Person object pointed to by people array for each line in the input file. 
+        The expected output is created by calling accessor methods on each person object. You job is to just change the part that says fill-in. The rest of the code is there to make testing easier and to make sure you do
+everything in an expected way. The program should runs as is but you will see it prints out no useful information. </p>
+ people1.txt has the following features: 
+<ul>
+<li>First entry is the name of the person (one word)</li>
+<li>Second entry is the age (one number)</li>
+<li>Third entry is the location (one word)</li></ul>
+<br>
+
+people2.txt has more complicated data format:
+
+<ul><li>Tab delimited </li>
+<li>First entry can be multiple words separated by space </li>
+<li>Second entry is a number for age</li>
+<li>Last entry can also be multiple words for location</li></ul>
+
+		<ol>
+        <li>Give the method call to useDelimiter() to use tab character. </li>
+        <li>Do you need next() or nextLine() to handle multiple words?</li>
+        </ol>    
+			</div>
+			
+    
+    </div>
+    
+ <div class="task">
+<h4>Task 4: IORunner.java</h4>
+<p> Put in appropriate calls to People.java so it prints out exactly as the Expected output for each of the files. </p>
+<pre>
+Expected Output:
+Enter the file name: data/people1.txt
+Abhay @SJ is 82
+Adam @SC is 71
+Alan @SC is 69
+Alexander @LA is 66
+Alexander @NF is 64
+Alfred @PD is 64
+Aña @Madera is 63
+Analisa @SF is 63
+Andrea @LA is 62
+Andrew @SF is 62
+Angelina @LA is 61
+Total people 11
+
+*********************************
+
+Enter the file name: data/people2.txt
+Abhay @San Jose is 82
+Adam @Santa Clara is 71
+Alan @Santa Cruz is 69
+Alexander @Los Angeles is 66
+Alexander @North Fork is 64
+Alfred @Palm Desert is 64
+Analisa @San Francisco is 63
+Andrea @La is 62
+Andrew @San Francisco is 62
+Angelina @Los Angeles is 61
+Antonietta Vicky @Altadena is 60
+Arun Premnath @San Francisco is 60
+Chih-sung (aka Ja) @North Fork is 52
+Colin @San Francisco is 51
+Cynthia @Eureka is 50
+
+Dalila @Utrecht is 50
+Dana Colleen @Santa Monica is 50
+Daniel @San Jose is 49
+Kristal @OR is 36
+Kristin Lunney @San Francisco is 36
+Kristina @Santa Monica is 35
+Kurt @FL is 35
+Lauren @San Francisco is 34
+Lien T. @Santa Cruz is 34
+Lifen @Del Mar is 34
+Total people 25
+</pre>
+    
+</body>
+</html>

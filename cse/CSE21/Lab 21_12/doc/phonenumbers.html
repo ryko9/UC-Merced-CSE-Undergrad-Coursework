@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Phone Numbers</title>
+<style type="text/css">
+.green {
+	color: green
+}
+
+.indent {
+	margin-left: 15pt
+}
+
+.task {
+	margin-left: 20pt;
+	border-left: 12px solid #BF9A6B;
+	padding: 0px 10px 0px 10px
+}
+
+h3 {
+	margin-top: 35pt;
+}
+</style>
+</head>
+<body>
+    <h3>
+        String Manipulation
+    </h3>
+    <p>
+        The task of this program is to read numbers from data/Phone.txt and display appropriately. 
+        Right now the code just prints out the file’s contents line by line. You should create an arrayList of every phone number
+        and return that to the caller. We have created <code>output</code> variable for you to insert each number into.
+        
+        So we will go through what you are given first. You can see the format of the phone numbers are the following:
+	<ol> 
+	<li>Country code is before the first dash (1-3 digits)</li>
+	<li>Between the first and second dashes are the city code (or area code) </li>
+	<li>After the second dash is the phone number
+	<ol type="a">
+	
+		<li>5-8 digits</li>
+		<li>May or may not have dash in the middle</li>
+		</ol>
+	</ol>
+	Your job is to separate the phone number String into 3 parts and print out as shown in the expected output.
+    </p>
+
+    <div class="task">
+        <h4>Task 1: PhoneNums.java</h4>
+
+        <pre>
+		1	String filename = "data/phone.txt"; 
+		2	ArrayList<String> output = new ArrayList<String>();
+
+		3	try {
+		4		Scanner input = new Scanner ( new FileReader(filename) );
+
+		5		while (input.hasNextLine()) {
+		6		System.out.println(input.nextLine());  
+				} 
+		7	input.close();
+		8	} catch ( NoSuchElementException e){
+		9		System.out.println(e);
+
+		10	} catch (FileNotFoundException e) {
+		11		System.out.println(e);
+		12	}
+		
+		13	return output;
+        </pre>
+        
+        <ol>
+            <li>What datatype is each arraylist element that got created in Line 2?
+            </li>
+            <li>How many objects are created in line 4 (Scanner input ... ) ? 
+            </li>
+            <li>How many pointers are used in line 4? List them:
+            </li>
+            <li>What is the difference between next() and nextLine()? 
+            </li>
+            <li>Why does line 5 use nextLine? Is there a delimiting character that will make next() be the same as nextLine()? 
+            </li>
+            <li>What is a NoFileFoundException? When will this occur?
+            </li>
+            <li>What is a NoSuchElementException? When will this occur?
+            </li>
+            <li>What does useDelimiter() method do for a Scanner object?
+            </li>
+            <li>List the two delimiters for phone numbers given in Phone.txt:
+            </li>
+            <li>What is being returned in Line 13? Is it a pointer or an object?
+            </li>
+        </ol>
+
+    </div>
+        <p> Try to answer these questions before you move to the next exercises in this lab. 
+        Understanding them will be quite helpful to finish the whole lab easily. </p>
+
+<pre>     
+	Expected Output:
+	
+	Country Code: 1
+	Area Code: 555
+	Phone Number: 5555555
+	
+	Country Code: 1
+	Area Code: 800
+	Phone Number: 5551212
+	
+	Country Code: 61
+	Area Code: 3
+	Phone Number: 95279527
+	
+	Country Code: 44
+	Area Code: 1289
+	Phone Number: 555555
+ </pre>

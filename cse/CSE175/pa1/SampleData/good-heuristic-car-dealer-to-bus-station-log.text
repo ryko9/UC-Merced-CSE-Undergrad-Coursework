@@ -1,0 +1,60 @@
+HEURISTIC SEARCH ALGORITHM COMPARISON
+Enter the name of the location file:
+small-locations.dat
+Enter the name of the road file:
+small-roads.dat
+Enter the name of the initial location:
+car-dealer
+Enter the name of the destination location:
+bus-station
+TESTING UNIFORM-COST SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT car-dealer.
+TAKE back-road FROM car-dealer TO truck-stop.
+TAKE highway-south FROM truck-stop TO bookstore.
+TAKE highway-east FROM bookstore TO fast-food.
+TAKE highway-north FROM fast-food TO bus-station.
+Path Cost = 25.100000.
+Number of Node Expansions = 22.
+TESTING UNIFORM-COST SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT car-dealer.
+TAKE back-road FROM car-dealer TO truck-stop.
+TAKE highway-south FROM truck-stop TO bookstore.
+TAKE highway-east FROM bookstore TO fast-food.
+TAKE highway-north FROM fast-food TO bus-station.
+Path Cost = 25.100000.
+Number of Node Expansions = 9.
+TESTING GREEDY SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT car-dealer.
+TAKE overgrown-path FROM car-dealer TO fast-food.
+TAKE highway-north FROM fast-food TO bus-station.
+Path Cost = 32.100000.
+Number of Node Expansions = 2.
+TESTING GREEDY SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT car-dealer.
+TAKE overgrown-path FROM car-dealer TO fast-food.
+TAKE highway-north FROM fast-food TO bus-station.
+Path Cost = 32.100000.
+Number of Node Expansions = 2.
+TESTING A* SEARCH WITHOUT REPEATED STATE CHECKING
+Solution:
+START AT car-dealer.
+TAKE back-road FROM car-dealer TO truck-stop.
+TAKE highway-south FROM truck-stop TO bookstore.
+TAKE highway-east FROM bookstore TO fast-food.
+TAKE highway-north FROM fast-food TO bus-station.
+Path Cost = 25.100000.
+Number of Node Expansions = 8.
+TESTING A* SEARCH WITH REPEATED STATE CHECKING
+Solution:
+START AT car-dealer.
+TAKE back-road FROM car-dealer TO truck-stop.
+TAKE highway-south FROM truck-stop TO bookstore.
+TAKE highway-east FROM bookstore TO fast-food.
+TAKE highway-north FROM fast-food TO bus-station.
+Path Cost = 25.100000.
+Number of Node Expansions = 8.
+ALGORITHM COMPARISON COMPLETE

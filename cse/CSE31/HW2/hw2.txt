@@ -1,0 +1,157 @@
+CSE31 HW2
+
+
+(Problem 1a)
+
+1001 0110
+
+Unsigned: 150
+Signed: -150
+One's Complement: 105
+Two's Complement: 210
+Bias: 
+
+	bias = -(2^n-1 - 1) = -(2^7 - 1) = -127
+	value = number + bias = 150 - 127 = 23
+
+0110 1001
+
+Unsigned: 1 + 8 + 32 + 64 = 105
+Signed: -105
+Ones Complement: -150
+Two's Complement -151
+Bias: 105 - 127 = -22
+
+0011 1010
+
+Unsigned: 2^1 + 2^3 + 2^4 + 2^5 = 2 + 8 + 16 + 32 = 58
+Signed: 58
+One's Complement: 1100 0101 = 2^0 + 2^2 + 2^6 + 2^7 =  1 + 4 + 64 + 128 = -197
+Two's Complement: 1100 0110 = 2^1 + 2^2 + 2^7 + 2^7 = 2 + 4 + 64 + 128 = -198
+Bias: 58 - 127 = -69
+
+1111 0000
+
+Unsigned: 2^4 + 2^5 + 2^6 + 2^7 = 16 + 32 + 64 + 128 = 240 
+Signed: -240
+One's Complement: 0000 1111 = 2^0 + 2^1 + 2^3 + 2^4 = 1 + 2 + 8 + 16 = 27
+Two's Complement: 0001 0000 = 2^4 = 16
+Bias: 240 - 127 = 113
+
+(Problem 1b)
+
+Can represent positive numbers: 
+
+	Unsigned: T
+	Signed: T
+	1's Comp: True
+	2'd Comp: True
+	Biased: True
+
+	
+Can represent negative numbers:
+
+	Unsigned: F
+	Signed: T
+	1's Comp: T
+	2's Comp: T
+	Biased: T
+
+Has more than one representation for 0
+
+	Unsigned: F
+	Signed: T
+	1's Comp: T
+	2's Comp: F
+	Biased:F
+
+Has the same addition process as unsigned:
+
+	Unsigned: T
+	Signed: T
+	1's Comp: T
+	2's Comp: T
+	Biased: T
+
+1c) -65536
+
+1d) 65535
+
+(Problem 2)
+
+char **copyStrArray(int count, char **strArray)
+{
+	char **copy;
+	char **temp;
+	int k;
+
+	copy = (char **) malloc (count*sizeof(char *));
+	temp = copy;
+	for (k=0; k<count; k++) 
+	{
+		(*temp) = (char *) malloc (((strlen(*strArray)+1)*sizeof(char));
+		strcpy (*temp, *strArray);
+		temp++;
+		strArray++;
+	}
+return copy;
+}
+
+(Problem 3)
+
+(3a)
+
+char* uppercase(char* str) 
+{
+	char* p;
+	char* result;
+
+	result = (char*) malloc(1+strlen(str));
+	strcpy(result, str);
+	
+	for( p = result; *p != ’\0’; p++ ) 
+	{
+		if (*p >= ’a’ && *p <= ’z’)
+			*p += ’A’ - ’a’;
+	}
+return result;
+}
+
+(3b)
+
+void upcase_by_ref( char** n ) 
+{
+	*n = uppercase (*n);
+}
+void upcase_name(char* names[], int i) 
+{
+	upcase_by_ref( &(names[i]) );
+}
+
+(Problem 4)
+
+(4a)
+
+void setName(Student* s, const char* name)
+{
+	s->name = name;
+} 	
+
+void getStudentID(const Student* s)
+{
+	return s->sid;
+}
+
+void setStudentID(Student* s, unsigned long sid)
+{
+	s->sid = sid;
+}
+
+(4b)
+
+Instead of returning &s, return s because &s would return the address and not the actual Student struct.
+
+
+
+
+ 

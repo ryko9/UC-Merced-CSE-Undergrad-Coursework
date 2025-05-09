@@ -1,0 +1,56 @@
+David Wang
+CSE 21
+
+Activity 6.2.3
+
+1.) (int x, int y)
+2.) (99, 44 + 5)
+3.) 55
+4.) (k, i + j, 99)
+
+Activity 6.3.3
+
+1.) True
+2.) False
+3.) True
+4.) True
+5.) False
+6.) False
+7.) True
+8.) False
+9.) False
+10.) True
+
+Activity 6.5.1
+
+1.) 2
+2.) 0.50
+3.) 9.50
+
+Activity 6.5.2
+
+1.) findLCM()
+2.) 4
+
+Lab 3 Logic Check
+
+1.) final means that no other values can be assigned to the variable through methods in the class
+2.) if you tried to change the value of MAX_BOX_SCORE_LENGTH inside initialize, you would get a compile time error.
+3.) the values would all be 0 if each entry were not initialized to SENTINEL.
+4.) an unitialized array would have all scores of 0 so the game would never end because 0 is a possible score in baseball and the game
+isn't over until one team scores higher than the other.
+5.) negative values are possible values for SENTINEL because they are the only numbers that can't be scored in baseball.
+6.) Instead of adding the amount scored per inning to the total score for each team, I used 
+
+	visitorScores[inning - 1] = scores.nextInt() and homeScores[inning - 1] = scores.nextInt() to store the scores for each team into seperate arrays.
+7.) (int v : teamBoxScore) goes through the array teamBoxScore 1 index at a time. v is teamboxScore[v].
+8.) teamBoxScore is an integer array just like visitorScores and homeScores so if visitorScores or homeScores is used as the argument that is passed through
+the gameScore method, the parameter type is satisfied so the values of the array are assigned into the teamBoxScore array.
+9.) it would go through MAX_BOX_SCORE_LENGTH times since it is the length of the arrays.
+10.) printBoxScore also checks to see that teamBoxScore[i] is not equal to SENTINEL.
+11.) Enhanced for loop was not used for printBoxScore. gameScore adds all the values in the array that are not equal to SENTINEL, but printScore prints out
+all the values in the array that are not equal to SENTINEl.
+12.) 2 minimum, for declaring 2 seperate variables that contain gameScore(visitorScores) and gameScore(homeScores)
+13.) 8 maximum, assuming you call the method each time you need the value.
+14.) 2 minimum
+15.) 4 maximum

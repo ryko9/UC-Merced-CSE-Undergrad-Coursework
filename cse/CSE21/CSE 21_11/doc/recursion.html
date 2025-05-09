@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Recursion</title>
+<style type="text/css">
+.green {
+	color: green
+}
+
+.indent {
+	margin-left: 15pt
+}
+
+.task {
+	margin-left: 20pt;
+	border-left: 12px solid #BF9A6B;
+	padding: 0px 10px 0px 10px
+}
+
+h3 {
+	margin-top: 35pt;
+}
+</style>
+</head>
+<body>
+    <h3>
+        Introduction to <code>Recursion</code>
+    </h3>
+    <p>
+        We will learn about recursion by stepping through the code first that we have supplied for you. 
+        Then you will fill in code to complete the behavior of other recursion programs. 
+    </p>
+
+    <div class="task">
+        <h4>Task 1: SimpleRecursion.java</h4>
+
+        <p>
+            There are 6 different versions of <code>recur</code> in <code>SimpleRecursion</code>. 
+            Your task is to run them and figure out how each of them behave.
+        </p>
+        <ol>
+            <li>What is the output of version 1 called with argument 0. 
+            </li>
+            <li>What is the output of version 2 called with argument 0. 
+            </li>
+            <li>What is the output of version 3 called with argument 0. 
+            </li>
+            <li>What is the output of version 4 called with argument 0. 
+            </li>
+            <li>What is the output of version 5 called with argument 0. 
+            </li>
+            <li>What is the output of version 6 called with argument 0. 
+            </li>
+            <li>How can we run all 6 version at once? (hint: name overloading does not work)
+            </li>
+        </ol>
+        <p> Modify <code>SimpleRecursion.java</code> so all 6 versions can be all ran inside <code>main</code>. 
+        Make sure that it is obvious which version is running by differentiating the outputs </p>
+    </div>
+
+	
+	<h3>Recursion Using Helper Methods</h3>
+	<div id="promptDiv">
+		<p>
+		We are now going to design a recursive version of a <tt>reverse</tt> method
+		that returns a copy of the argument string with its characters reversed.
+		Here are some examples:
+		</p>
+<table border="1">
+<tr><td>call to <tt>reverse</tt></td><td>returned value</td></tr>
+<tr><td><tt>reverse("ABC")</tt></td><td><tt>"CBA"</tt></td></tr>
+<tr><td><tt>reverse("ZYX177")</tt></td><td><tt>"771XYZ"</tt></td></tr>
+</table>
+<p>
+One can easily write <tt>reverse</tt> iteratively, with a loop instead of recursion.
+In many problems, however, this is not so simple.
+Our intent here is to help you add another tool to your toolbox,
+so that when a problem shows up that requires recursion, you'll be ready.
+</p>
+<p>
+We first will explore writing <i>separate</i> methods for different string lengths&mdash;<tt>reverse1</tt>,
+<tt>reverse2</tt>, <tt>reverse3</tt>, and so on.  For some programmers, this is a useful
+intermediate design step toward the goal of coding a general recursive <tt>reverse</tt>.
+		</p>
+	</div>
+	
+    <div class="task">
+        <h4>Task 2: NaiveReverse.java</h4>
+        <p>Fill in the code inside <code>reverse6</code> method. </p>
+        <ol>
+        <li>Can you think of how to extend this algorithm for <code>reverse7</code> method? Explain
+				<p>
+					A fellow student thinks that using a helper method will make it
+					easier to write
+					<tt>reverse9</tt>
+					, a method to reverse Strings of length 9. Your instructor suggests
+					using
+					<tt>reverse8</tt>
+					as the helper (you can assume that <tt>reverse8</tt> works correctly; that
+					is, it reverses a String of length 8 correctly). Here is the
+					solution he came up with:
+				</p>
+				<pre><code data-language="java">public String reverse9 (String s) {
+   String partial = reverse8(s.substring(1,9));
+   String firstLetter = s.substring(0,1);
+   return (firstLetter + partial);
+}</code></pre>
+
+					<li>The student tests his <tt>reverse9</tt> on the String <tt>"confident"</tt>.
+						What will it return?
+					</li>
+					<li>What should be the proper reversed string for "confident"? </li>
+					<li>Suggest how to fix the code so it does it correctly </li>
+				</ol>
+			</div>
+    </div>
+    
+    <div class="task">
+        <h4>Task 3: Reverse17.java</h4>
+        <p>Fill in the code inside <code>reverse17</code> method. </p>
+    </div>
+
+    <div class="task">
+        <h4>Task 4: Reverse.java</h4>
+        <p>The usual way to write recursion is using a base case to return a default value and recursing otherwise (Zyante 11.4). 
+        Fill in the code inside <code>reverse</code> method to check for a base case and recursion case while returning the proper values or expressions. </p>
+    </div>
+
+    <h3>Working with Numbers</h3>
+    <div class="task">
+        <h4>Task 5: Halved.java</h4>
+        <p>
+            Fill in Halved.java so it uses recursion to return the result of a given number halved. It does not using any division or multiplication but uses subtraction instead.
+            Every 2 number is considered to find the number that is half using the integer operation. So half of 10 is 5 but it is also the same answer for 11. Your task is to figure out
+            the base case where half of a small number is 0 (returning 0). Figure out the ranger of small numbers where this is true and put it into the condition check of the if-statement.
+        </p>
+    </div>   
+		
+		<p>Here ís another example. The digitCount method is intended to return the number 
+			of digits in its nonnegative integer argument; for example, given 314159 or 700000 as argument,
+			 it should return 6. Leading zeroes arenít counted except in the case where the argument is 0.
+	</p>
+			<pre><code data-language="java">public static int digitCount (int value) {
+	if (value == 0) {
+		return 1;
+	} else {
+		return 1 + digitCount(value/10);
+	}
+}</code></pre>
+	
+    <div class="task">
+        <h4>Task 6: DigitCount.java</h4>
+        <ol>
+        <li>What is returned from the call <tt>digitCount(0)</tt>, 
+					using the <tt>digitCount</tt> method? </li>
+        <li>What is returned from the call <tt>digitCount(10)</tt>, 
+					using the <tt>digitCount</tt> method? </li>        
+		<li>What is returned from the call <tt>digitCount(314159)</tt>, 
+					using the <tt>digitCount</tt> method? </li>
+		<li>Should the digit count increase if the value is 0? If not how should the code change</li>
+		<li>What other values of a number where digit count should not increase? Make the code change to include those values </li>
+        <p>
+            Fix DigitCount with the answers to the questions so it works properly. </ol>
+    </div>
+
+</body>
+</html>

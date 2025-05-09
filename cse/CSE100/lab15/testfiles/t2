@@ -1,0 +1,57 @@
+r
+s
+t
+u
+v
+w
+x
+y
+END
+s r 10
+r s 10
+r v 14
+v r 14
+s w 4
+w s 4
+w t 5
+t w 5
+w x 3
+x w 3
+t u 7
+u t 7
+x u 2
+u x 2
+END
+1 r
+1 s
+1 t
+1 p
+1 l
+1 k
+1 u
+1 v
+1 c
+1 w
+1 x
+1 y
+1 i
+2 r s
+2 r v
+2 r o
+2 s w
+2 s q
+2 w t
+2 i k
+2 w x
+2 t y
+2 u y
+2 e r
+3 s r
+3 s y
+3 s w
+3 s t
+3 s x
+3 s u
+3 s s
+3 s y
+0

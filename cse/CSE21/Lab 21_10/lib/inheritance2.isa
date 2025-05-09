@@ -1,0 +1,37 @@
+<isa>
+	<name>Test1</name>
+	<intro>Some testing #1.</intro>
+
+	
+	<exercise>
+		<name>TrackedArrayList</name>
+		<type>code</type>
+		<intro>Tracked ArrayLists: use inheritance to write a class that tracks is usage</intro>
+		<source>/src/arraylist/TrackedArrayList.java</source>
+		<testclass>tests.TrackedArrayListTests</testclass>
+		</exercise>
+
+	<exercise>
+		<name>ConservativePlayer</name>
+		<type>code</type>
+		<intro>Game of Pig: create ConservativePlayer</intro>
+		<source>/src/pig/ConservativePlayer.java</source>
+		<testclass>tests.ConservativePlayerTest</testclass>
+		</exercise>
+
+	<exercise>
+		<name>RiskyPlayer</name>
+		<type>code</type>
+		<intro>Game of Pig: create RiskyPlayer</intro>
+		<source>/src/pig/RiskyPlayer.java</source>
+		<testclass>tests.RiskyPlayerTest</testclass>
+		</exercise>
+
+
+
+
+
+
+
+
+</isa>

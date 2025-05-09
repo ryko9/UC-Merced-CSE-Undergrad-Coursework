@@ -1,0 +1,648 @@
+Setup Shop(I)
+
+
+I: 1-3) 
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 0
+ 
+Please enter the amount to qualify for discount: 1
+Please enter the discount rate(0.1 for 10%): .1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $0.0
+Discount: $0.0
+Total: $0.0
+
+ 
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 1
+ 
+Enter name of product 0: Cheese
+Enter price of product 0: 2.99
+Please enter the amount to qualify for discount: 10
+Please enter the discount rate(0.1 for 10%): .25
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Cheese : 3
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+3 count(s) of Cheese @ 2.99 = $8.97
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $8.97
+Discount: $0.0
+Total: $8.97
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 2
+ 
+Enter name of product 0: Cheese
+Enter price of product 0: 2.99
+Enter name of product 1: Apple
+Enter price of product 1: 3.99
+Please enter the amount to qualify for discount: 20
+Please enter the discount rate(0.1 for 10%): .25
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Cheese : 4
+Enter the amount of Apple : 4
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+4 count(s) of Cheese @ 2.99 = $11.96
+4 count(s) of Apple @ 3.99 = $15.96
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $27.92
+Discount: $6.98
+Total: $20.94
+
+I: 4) 
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 1
+ 
+Enter name of product 0: Banana
+Enter price of product 0: 2.50
+Please enter the amount to qualify for discount: 10
+Please enter the discount rate(0.1 for 10%): .25
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 1
+ 
+Enter name of product 0: Apple
+Enter price of product 0: 3
+Please enter the amount to qualify for discount: 10
+Please enter the discount rate(0.1 for 10%): .25
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Apple : 1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+1 count(s) of Apple @ 3.0 = $3.0
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $3.0
+Discount: $0.0
+Total: $3.0
+
+II: 1)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Shop is not setup yet!
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 
+
+II: 2)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 2
+ 
+Enter name of product 0: Bananas
+Enter price of product 0: 2
+Enter name of product 1: Apples
+Enter price of product 1: 3
+Please enter the amount to qualify for discount: 20
+Please enter the discount rate(0.1 for 10%): .1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Bananas : 5
+Enter the amount of Apples : 6
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+5 count(s) of Bananas @ 2.0 = $10.0
+6 count(s) of Apples @ 3.0 = $18.0
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $28.0
+Discount: $2.8000000000000003
+Total: $25.2
+
+II: 3)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 2
+ 
+Enter name of product 0: Apples
+Enter price of product 0: 3
+Enter name of product 1: Bananas
+Enter price of product 1: 2
+Please enter the amount to qualify for discount: 30
+Please enter the discount rate(0.1 for 10%): .1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Apples : 1
+Enter the amount of Bananas : 2
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Apples : 4
+Enter the amount of Bananas : 0
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+4 count(s) of Apples @ 3.0 = $12.0
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Apples : 1
+Enter the amount of Bananas : 1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+1 count(s) of Apples @ 3.0 = $3.0
+1 count(s) of Bananas @ 2.0 = $2.0
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $5.0
+Discount: $0.0
+Total: $5.0
+
+List (III)
+
+III : 1) 
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+Shop is not setup yet!
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 
+
+III: 2)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 2
+ 
+Enter name of product 0: Apples
+Enter price of product 0: 2.99
+Enter name of product 1: Bananas
+Enter price of product 1: 3.99
+Please enter the amount to qualify for discount: 30
+Please enter the discount rate(0.1 for 10%): .2
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+Try again: You have not bought anything
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 
+
+III: 3)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 2
+ 
+Enter name of product 0: Apples
+Enter price of product 0: 2.99
+Enter name of product 1: Pineapples
+Enter price of product 1: 3.99
+Please enter the amount to qualify for discount: 21
+Please enter the discount rate(0.1 for 10%): .1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Apples : 0
+Enter the amount of Pineapples : 3
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+3 count(s) of Pineapples @ 3.99 = $11.97
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 
+
+Checkout(IV)
+
+IV: 1)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Shop is not setup yet!
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 1
+ 
+Enter name of product 0: Apples
+Enter price of product 0: 4.99
+Please enter the amount to qualify for discount: 10
+Please enter the discount rate(0.1 for 10%): .2
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Apples : 5
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+5 count(s) of Apples @ 4.99 = $24.950000000000003
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $24.950000000000003
+Discount: $4.990000000000001
+Total: $19.96
+ 
+
+IV: 2)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 3
+ 
+Enter name of product 0: Apples
+Enter price of product 0: 2.99
+Enter name of product 1: Pears
+Enter price of product 1: 3.99
+Enter name of product 2: Pens
+Enter price of product 2: 1.50
+Please enter the amount to qualify for discount: 20
+Please enter the discount rate(0.1 for 10%): .05
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Try again: You have not bought anything
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Apples : 1
+Enter the amount of Pears : 0
+Enter the amount of Pens : 1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $4.49
+Discount: $0.0
+Total: $4.49
+
+IV: 3)
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 2
+ 
+Enter name of product 0: Lamps
+Enter price of product 0: 29.99
+Enter name of product 1: TV
+Enter price of product 1: 299.99
+Please enter the amount to qualify for discount: 0
+Please enter the discount rate(0.1 for 10%): 1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Lamps : 1
+Enter the amount of TV : 1
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+1 count(s) of Lamps @ 29.99 = $29.99
+1 count(s) of TV @ 299.99 = $299.99
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $329.98
+Discount: $329.98
+Total: $0.0
+
+IV: 4) 
+
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 1
+Please enter the number of items: 3
+ 
+Enter name of product 0: Laptop
+Enter price of product 0: 699.99
+Enter name of product 1: Mouse
+Enter price of product 1: 9.99
+Enter name of product 2: Headset
+Enter price of product 2: 39.99
+Please enter the amount to qualify for discount: 500
+Please enter the discount rate(0.1 for 10%): .25
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 2
+ 
+Enter the amount of Laptop : 1
+Enter the amount of Mouse : 1
+Enter the amount of Headset : 0
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 3
+ 
+1 count(s) of Laptop @ 699.99 = $699.99
+1 count(s) of Mouse @ 9.99 = $9.99
+ 
+This program supports 4 functions:
+      1. Setup Shop
+      2. Buy
+      3. List Items
+      4. Checkout
+Please choose the function you want: 4
+ 
+Thanks for coming!
+Sub Total: $709.98
+Discount: $177.495
+Total: $532.485
+

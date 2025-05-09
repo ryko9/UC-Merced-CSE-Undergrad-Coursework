@@ -1,0 +1,25 @@
+1.	a)	There are no misses when the offset starts at 0.
+	b)	There are no misses in a fully assoc. cache when accessing the same 64 values.
+	c)	In a direct mapped cache, there would be a 4/64 miss ratio.
+	d)	In a fully associative cache, then there are no misses.
+	e)	No, it does not surprise me, because since the offset starts at 1 and each block can hold 4 values so we would have a total of 4 misses.
+		In a 2-way and etc cache, then there would be fewer misses because the tag would still match a block with 4 values.
+	
+2.	write-back will be preferred when we dont write often and to save time in the current cycle we will push off the writing to the next write cycle.
+	write-through will be preferred when we need to write often and we dont want to store the "dirty" information inside of the cache and want to just 
+	write it to memory right away.
+
+3.	2-way would perform better when if we assume that there is only space for 4 blocks, if we load values ABCD where
+	all of them miss, and then load value F where in a 2-way cache it would replace the 2nd index value: C. so in a 2 way cache
+	it would appear as ABFD, but in a fully associative cache it would appear as FBCD. Then if we load A again, the fully associative cache would
+	end up missing but the 2-way cache would hit.
+	
+	Fully associative cache would outperform 2-way when if we load ABC into both caches, and then load a fourth value D where D has an index bit of 0.
+	This would make the 2-way cache kick out A whereas the Fully associative cache just adds it. 2-way:DBC, Fully Associative: ABCD.
+
+4.	The only difference in either cache is that the L2 cache would be written the same way as the cache as right now but the L1 cache would instead
+	call upon the L2 cache when trying to access memory instead of going straight to DRAM.
+	
+5.	We now need a lookup table in the virtual memory because now there can be multiple addresses that lead to different pages in the virtual memory.
+	It functions similar to a cache however it gives each program a fresh start at a certain PC, meaning that the addr given to accessMemory() would
+	need to have an offset to reflect the physical memory when trying to access physical memory.

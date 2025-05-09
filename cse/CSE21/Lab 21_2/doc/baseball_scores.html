@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            CSE 21 lab 2
+        </title>
+        <meta name="generator" content="BBEdit 10.5" />
+    </head>
+    <body>
+        <h1> Baseball score processing </h1>
+        <h3> Background </h3>
+        <p>
+            A game of baseball or softball is composed of <i>innings</i>.
+            Each inning has two <i>halves</i>.
+            In the first half of an inning, the visiting team gets a chance to score <i>runs</i>;
+            in the second half, the home team takes its turn to try to score.
+            The visiting team's total score is the sum of the number of runs in the first half
+            of each inning; similarly, the home team's total score is the sum
+            of the number of runs in the second half of each inning.
+        </p>
+        <p>
+            A baseball game normally consists of nine innings.
+            There are two exceptions.
+        </p>
+        <ul>
+            <li>
+                When the home team's score exceeds the visiting team's score after completing the first half
+                of the ninth inning, the game ends immediately with 8&frac12; innings;
+            </li>
+            <li>
+                When at least nine innings have been played and the score is tied, the game goes into
+                <i>extra innings</i>. Another inning is played;
+                if the score is still tied, another inning is played, and so on.
+            </li>
+        </ul>
+        <h3> Problem </h3>
+        <p>
+            <a href="../src/Scorer.java">Scorer.java</a>, already in your imported project,
+            is a framework for a program to read half-inning scores from a baseball game
+            and print the total number of runs scored by each team as well as information
+            about which team won.
+        </p>
+        <p>
+            This code uses Java <i>methods</i>
+            to perform different sub-problems.  The comments for each method are intended
+            to help you understand what each sub-problem is and how the method is
+            supposed to solve it.  Included in the comments are descriptions of
+            your tasks in this exercise.
+        </p>
+        <p>
+            You are to complete the framework and make the code work.  You'll change
+            each of the methods in <tt>Scorer.java</tt>.
+        </p>
+
+        <h3>Sample Outputs</h3>
+        <pre>
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 2 0
+The home team won 2 to 1 in 9 innings.
+			
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 2
+The home team won 3 to 1 in 9 innings.
+
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 2 2
+The visiting team won 3 to 2 in 9 innings.
+			
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 2 2 2 2 0 1
+The home team won 6 to 5 in 11 innings.
+			
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 2 2 2 2 1 0
+The visiting team won 6 to 5 in 11 innings.
+        </pre>
+
+        <h3>Tasks</h3>
+        <ol>
+            <li>
+                Complete the body of the <tt>initialize</tt> method
+                by assigning values that represent the start of a game to
+                the static instance variables.
+            </li>
+
+            <li>
+                Rewrite the <tt>gameIsOver</tt> method so it doesn't use the
+                "and" (&amp;&amp;) and "or" (||)
+                operators.  Note: In assessment question #3, you will fill out
+                a table of values that can help you test this method, so do that first to figure out the logic.
+            </li>
+            <li>
+                Supply the body of the loop in the <tt>readScores</tt>
+                method.
+            </li>
+            <li>
+                Fill in the blanks in the <tt>result</tt> method.
+            </li>
+            <li>
+                Lastly, supply the body of the <tt>main</tt> method to run the program correctly.
+            </li>
+        </ol>
+
+        <p>
+            For each method/task other than the last, you should test your solution from within 
+            the main method.
+            A sample test has been included for the <tt>initialize()</tt> task; it prints out
+            the values of the relevant variables after <tt>initialize()</tt> has been called.
+            When you are satisfied that you've tested the task enough and it works <i>perfectly</i>,
+            comment out your testing code but <u>leave it in the main() method</u>.
+        </p>
+        <p>
+            Using temporary <tt>System.out.println()</tt> calls to test the functioning of methods
+            that you are writing is a good way to inspect whether your solution is correct.  There are
+            other ways&mdash;more complicated, but better for many reasons&mdash;that we will
+            look at later in the course.
+        </p>
+    </body>
+</html>

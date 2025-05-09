@@ -1,0 +1,89 @@
+David Wang
+CSE 140
+
+Homework 8
+
+1.)
+
+	loop: iteration 1
+
+	LW R4, 0(R3)	#R4 = 0 
+	ADDI R3, R3, 4
+	SUBI R1, R!, 1  #R1 = 1
+
+	b1:
+
+	BEQ R0, R4, b2 
+	ADDI R2, R2, 1 #R2 = 9
+
+	b2:
+
+	BNE R0, R1, loop
+	ADDI R3, R3, 4
+	previous ADDI
+
+	loop: iteration 2
+
+	LW R4, 0(R3)	#R4 = 0
+	ADDI R3, R3, 4
+	SUBI R1, R1, 1	#R1 = 0
+
+	b1: 
+
+	BEQ R0, R4, b2
+	ADDI R2, R2, 1	#R2 = 10
+
+	b2:
+
+	BNE R0, R1, loop
+	ADDI R3, R3, 4
+	previous addi
+
+	R2 is equal to 10 after 5 iterations
+
+2.)
+
+Since b1 doesn't modify R2, it would still be 5 after 5 iterations. Thus, R2 is equal to 5 after 5 iterations.
+
+3.)
+
+Modifying R2 makes the most sense.
+
+4.)
+
+The branch predictor will work if R3 is a pointer to an array containing all elements of 0.
+
+5.)
+
+The branch predictor will work well if R3 is a pointer to an array containing all numbers that are the same.
+
+6.)
+
+The predictor will not be able to predict as accurately when there are alternating numbers.
+
+7.)
+
+    use   ex    op    p1    PR1    p2    PR2    Rd    LPRd    PRd
+1        ADDI                                   LW     
+2
+3
+4
+5        SUBI         ADDI    
+6
+7        ADDI    BEQ
+8
+9                                        BEQ
+10       ADDI    BEQ
+11                                  
+12                                       BEQ
+13       ADDI
+
+8.)
+
+
+The unified physical register file machines remove data values from the ROB. The values are read and written during the execution phase, resources are allocated during decode. Only register tags are held in ROB and issue windows can be made seperate. Resources in ROB can also be freed on commit.
+
+
+9.)
+
+ROB avoids data hazards with no interlocks by using static multiple issue scheduling.

@@ -1,0 +1,27 @@
+array 3
+
+
+int size; //input for the length of each row/column
+int input;
+
+output: "Enter the size of a 2d array: "
+input: size
+negativeCount;
+
+if(array is within 0 to 10)
+
+	int arr[size][size];
+
+	for(int i = 0; i < input; i++)
+		output: Enter the array for row (i) seperated by a space, and press enter: 	
+		
+		for (int j = 0; j < size; j++)
+			arr[i][j] = inputed values			
+				if(input < 0) //negative
+					negativeCount++;
+
+else if (array is above 10)
+	output: too large
+
+else
+	output: too small.

@@ -1,0 +1,24 @@
+<isa>
+	<name>Input Output</name>
+	<intro>Input output exercises (Person, matrix writing and reading).</intro>
+
+	
+	<exercise>
+		<name>Person</name>
+		<type>code</type>
+		<intro>Fill in the Person class</intro>
+		<source>/src/io/Person.java</source>
+		<testclass>tests.PersonTest</testclass>
+		</exercise>
+
+	<exercise>
+		<name>People</name>
+		<type>code</type>
+		<intro>Read and write using the People class</intro>
+		<source>/src/io/People.java</source>
+		<testclass>tests.PeopleTest</testclass>
+		</exercise>
+
+	
+
+</isa>
