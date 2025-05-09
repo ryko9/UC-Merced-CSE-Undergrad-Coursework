@@ -1,6 +1,0 @@
-at
-bat
-cat
-dat
-eat
-fat

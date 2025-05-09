@@ -1,7 +1,0 @@
-myviewer: public: Sn my node
-
-viewer cpp add to constructor
-
-sn my node h add member functions
-
-sn my node cpp define values for member functions
